@@ -1,0 +1,49 @@
+"use client";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React from "react";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
+export const EventTabs = (props: any) => {
+  const years: Record<string, React.ReactElement<any>[]> = props.years;
+  const contentTail =
+    "mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-center m-0";
+  const currentYear: string = new Date().getFullYear().toString();
+  return (
+    <div className="px-10 md:px-0 my-10 mx-auto max-w-5xl">
+      <Tabs
+        defaultValue={currentYear}
+        className="flex flex-col items-center sm:items-start sm:flex-row gap-10 justify-center"
+      >
+        <TabsList
+          aria-label="tabs example"
+          className="py-2 md:py-4 px-4 flex sm:flex-col gap-4
+                rounded-md  border border-rose-200 dark:border-slate-800 
+                bg-rose-100 dark:bg-slate-900 h-min"
+        >
+          <ScrollArea className="sm:max-w-[65px]">
+            {Object.entries(years)
+              .reverse()
+              .map(([key, components]) => (
+                <TabsTrigger
+                  key={key}
+                  value={key}
+                  className="my-0.5 md:my-1 md:mx-1 select-none"
+                >
+                  {key}
+                </TabsTrigger>
+              ))}
+          </ScrollArea>
+        </TabsList>
+        <div>
+          {Object.entries(years).map(([key, components]) => (
+            <TabsContent key={key} value={key} className={contentTail}>
+              {years[key]}
+            </TabsContent>
+          ))}
+        </div>
+      </Tabs>
+    </div>
+  );
+};
+
+export default EventTabs;
