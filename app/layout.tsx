@@ -1,9 +1,6 @@
-"use client";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import AppBar from "@/components/AppBar/AppBar";
-import Footer from "@/components/Footer/Footer";
-import { ThemeProvider } from "next-themes";
+import RootComponent from "./ThemeWrapper.tsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider enableSystem defaultTheme="dark" attribute="class">
-          <AppBar />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <RootComponent>{children}</RootComponent>
       </body>
     </html>
   );
