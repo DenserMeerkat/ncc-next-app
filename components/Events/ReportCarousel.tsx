@@ -109,7 +109,7 @@ const ReportCarousel = (props: any) => {
         >
           {images.map((image: string, index: number) => (
             <div key={index} className="">
-              <div>
+              <div className="select-none">
                 <Image
                   src={image}
                   width={1100}

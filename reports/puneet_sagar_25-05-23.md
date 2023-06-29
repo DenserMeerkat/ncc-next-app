@@ -2,8 +2,13 @@
 title: "Puneet Sagar Abhiyan"
 location: "Besant Nagar Beach, Chennai"
 date: "25-09-2024"
-images: ["/images/psag1.jpg", "/images/psag2.jpg", "/images/psag3.jpg"]
-thumb: "/images/psag3.jpg"
+images:
+  [
+    "/images/reports/psag1.jpg",
+    "/images/reports/psag2.jpg",
+    "/images/reports/psag3.jpg",
+  ]
+thumb: "/images/reports/psag3.jpg"
 ---
 
 ---
@@ -43,9 +48,11 @@ the Unit by 8:30 am, and dispersed.
             <th>Total</th>
         </tr>
     </thead>
-    <tbody>
+        <tbody>
         <tr>
-            <td rowspan="3">SW</td>
+            <td rowspan="4">SW</td>
+        </tr>
+        <tr>
             <td>Engineers</td>
             <td>-</td>
             <td>4</td>
@@ -67,7 +74,9 @@ the Unit by 8:30 am, and dispersed.
             <td>5</td>
         </tr>
         <tr>
-            <td rowspan="3">SD</td>
+            <td rowspan="4">SD</td>
+        </tr>
+        <tr>
             <td>Engineers</td>
             <td>-</td>
             <td>3</td>

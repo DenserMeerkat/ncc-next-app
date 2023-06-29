@@ -3,6 +3,7 @@
 import TooltipElement from "../common/TooltipElement";
 import { Pause, Play, StepForward, StepBack } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -29,12 +30,20 @@ export const Hero = () => {
         className="p-0 md:p-2 border border-gray-300 dark:border-slate-700
        lg:rounded-lg bg-rose-100 dark:bg-slate-900 "
       >
-        <div className="lg:rounded-md">
+        <div className="rounded-none lg:rounded-md">
           <h2>Splide</h2>
           <SplideCarousel />
           <div className="m-4"></div>
           <h2>MultiCarousel</h2>
-          <MultiCarousel />
+          <MultiCarousel
+            images={[
+              nccWallpaper,
+              nccWallpaper,
+              nccWallpaper,
+              nccWallpaper,
+              nccWallpaper,
+            ]}
+          />
           <div className="m-4"></div>
           <h2>SwiperJs</h2>
           <SwiperCarousel />
@@ -55,21 +64,21 @@ export const Hero = () => {
   );
 };
 
-const MultiCarousel = () => {
-  const nccWallpaper = "/images/ncc_wallpaper.jpg";
+const MultiCarousel = (props: any) => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const imgTail =
-    "relative mx-1 rounded-md overflow-hidden object-cover select-none pointer-events-none";
+    "mx-1 relative md:rounded-sm overflow-hidden object-cover select-none pointer-events-none";
   const responsive = {
     superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
+      breakpoint: { max: 4000, min: 2400 },
       items: 1,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 2400, min: 768 },
       items: 1,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 768, min: 464 },
       items: 1,
     },
     mobile: {
@@ -77,39 +86,84 @@ const MultiCarousel = () => {
       items: 1,
     },
   };
+  const images = props.images;
+  const length = images.length;
+  const [active, setActive] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
+
+  const controlTail = `p-1 bg-rose-200 dark:bg-slate-700 text-gray-700 dark:text-slate-300
+    hover:bg-rose-300 dark:hover:bg-slate-600  transition-colors`;
+
+  const handleAutoplayClick = () => {
+    setAutoplay(autoplay ? false : true);
+  };
+  const handleNextClick = () => {
+    setActive(active < length - 1 ? active + 1 : 0);
+  };
+  const handlePrevClick = () => {
+    setActive(active > 0 ? active - 1 : length - 1);
+  };
   return (
-    <Carousel
-      responsive={responsive}
-      partialVisbile={false}
-      autoPlay
-      ssr
-      infinite
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-    >
-      <div className={imgTail}>
-        <Image src={nccWallpaper} width={1920} height={1080} alt="Image 1" />
-      </div>
-
-      <div className={imgTail}>
-        <Image src={nccWallpaper} width={1920} height={1080} alt="Image 1" />
-      </div>
-
-      <div className={imgTail}>
-        <Image src={nccWallpaper} width={1920} height={1080} alt="Image 1" />
-      </div>
-
-      <div className={imgTail}>
-        <Image src={nccWallpaper} width={1920} height={1080} alt="Image 1" />
-      </div>
-
-      <div className={imgTail}>
-        <Image src={nccWallpaper} width={1920} height={1080} alt="Image 1" />
-      </div>
-
-      <div className={imgTail}>
-        <Image src={nccWallpaper} width={1920} height={1080} alt="Image 1" />
-      </div>
-    </Carousel>
+    <div className="relative">
+      {!isMobile && (
+        <div
+          aria-label="Carousel Controls"
+          className="flex gap-0.5 absolute z-10 rounded-br-sm md:rounded-br-none md:rounded-tr-sm rounded-bl-sm overflow-hidden
+        -bottom-8 left-1/2 transform -translate-x-1/2 md:bottom-auto md:left-auto md:right-1 md:translate-x-0
+  "
+        >
+          <button aria-label="Previous button" className={controlTail}>
+            <TooltipElement
+              element={<StepBack onClick={handlePrevClick} />}
+              tooltip={"Previous"}
+            />
+          </button>
+          <button aria-label="Play/Pause button" className={controlTail}>
+            {autoplay ? (
+              <TooltipElement
+                element={<Pause onClick={handleAutoplayClick} />}
+                tooltip={"Pause Autoplay"}
+              />
+            ) : (
+              <TooltipElement
+                element={<Play onClick={handleAutoplayClick} />}
+                tooltip={"Play Autoplay"}
+              />
+            )}
+          </button>
+          <button aria-label="Forward button" className={controlTail}>
+            <TooltipElement
+              element={<StepForward onClick={handleNextClick} />}
+              tooltip={"Next"}
+            />
+          </button>
+        </div>
+      )}
+      <Carousel
+        responsive={responsive}
+        partialVisbile={false}
+        autoPlay={!isMobile ? autoplay : false}
+        ssr
+        infinite
+        removeArrowOnDeviceType={["desktop", "superLargeDesktop"]}
+        className="max-w-5xl md:rounded-md overflow-visible mx-auto"
+      >
+        {images.map((image: string, index: number) => (
+          <div key={index} className={imgTail}>
+            <div>
+              <Image
+                src={image}
+                width={1980}
+                height={720}
+                alt={image}
+                loading="lazy"
+                quality={100}
+              />
+            </div>
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 

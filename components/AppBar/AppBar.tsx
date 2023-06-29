@@ -46,7 +46,7 @@ const AppBar = (props: any) => {
             <Image
               width={18}
               height={30}
-              src="/images/ncc_logo.png"
+              src="/images/logos/ncc_logo.png"
               alt="NCC logo"
             />
           </div>
