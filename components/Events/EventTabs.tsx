@@ -17,8 +17,8 @@ export const EventTabs = (props: any) => {
         <TabsList
           aria-label="tabs example"
           className="py-2 md:py-4 px-4 flex sm:flex-col gap-4
-                rounded-md  border border-rose-200 dark:border-slate-800 
-                bg-rose-100 dark:bg-slate-900 h-min"
+                rounded-md  border border-rose-300 dark:border-slate-800 
+                bg-rose-200 dark:bg-slate-900 h-min"
         >
           <ScrollArea className="sm:max-w-[65px]">
             {Object.entries(years)
@@ -27,7 +27,7 @@ export const EventTabs = (props: any) => {
                 <TabsTrigger
                   key={key}
                   value={key}
-                  className="my-0.5 md:my-1 md:mx-1 select-none"
+                  className="my-0.5 md:my-1 md:mx-1 select-none text-gray-800 dark:text-slate-300"
                 >
                   {key}
                 </TabsTrigger>

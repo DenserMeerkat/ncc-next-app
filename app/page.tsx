@@ -1,4 +1,4 @@
-import Hero from "@/components/Home/Carousel";
+import HeroCarousel from "@/components/Home/Carousel";
 import HeroHead from "@/components/Home/HeroHead";
 
 export default function Home() {
@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <div className="h-fit">
         <HeroHead />
-        <Hero />
+        <HeroCarousel />
       </div>
     </main>
   );

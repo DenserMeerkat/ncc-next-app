@@ -36,8 +36,8 @@ const AppBar = (props: any) => {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-2 flex justify-between items-center">
         <Link
           href={"/"}
-          className="flex dark:hover:bg-slate-900 hover:bg-gray-300 py-1.5 px-3 rounded-md items-center cursor-pointer
-          border border-transparent  hover:border-gray-400 dark:hover:border-slate-700"
+          className="flex dark:hover:bg-slate-900 hover:bg-rose-200 py-1.5 px-3 rounded-md items-center cursor-pointer
+          border border-transparent  hover:border-rose-300 dark:hover:border-slate-700"
           onClick={() => {
             handleClick("home");
           }}
@@ -50,7 +50,7 @@ const AppBar = (props: any) => {
               alt="NCC logo"
             />
           </div>
-          <h1 className="text-lg font-semibold dark:font-medium">
+          <h1 className="text-lg font-semibold dark:font-bold ">
             {!isMobile ? `NCC | Anna University` : `NCC | AU`}
           </h1>
         </Link>

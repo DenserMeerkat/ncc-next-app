@@ -9,7 +9,10 @@ import { useMediaQuery } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-export const Hero = () => {
+const controlTail = `p-1.5 md:p-2.5 bg-rose-300/[0.9] dark:bg-slate-700/[0.95] text-gray-800 dark:text-slate-300 rounded-md
+hover:bg-rose-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
+
+export const HeroCarousel = () => {
   const nccWallpaper = "/images/ncc_wallpaper.jpg";
   return (
     <div className="max-w-6xl mx-auto  mt-10 mb-10">
@@ -55,9 +58,6 @@ const MultiCarousel = (props: any) => {
   const images = props.images;
   const [autoplay, setAutoplay] = useState(true);
 
-  const controlTail = `p-1 md:p-2 bg-rose-200/[0.9] dark:bg-slate-700/[0.9] text-gray-700 dark:text-slate-300
-    hover:bg-rose-300 dark:hover:bg-slate-600 transition-colors drop-shadow-lg rounded-md`;
-
   const handleAutoplayClick = () => {
     setAutoplay(autoplay ? false : true);
   };
@@ -67,21 +67,37 @@ const MultiCarousel = (props: any) => {
       {!isMobile && (
         <div
           aria-label="Carousel Controls"
-          className=" absolute z-10 rounded-sm
-        -bottom-8 left-1/2 transform -translate-x-1/2 md:top-1.5 md:bottom-auto md:left-auto md:right-1.5 md:translate-x-0
+          className=" absolute z-10 rounded-sm 
+        -bottom-8 left-1/2 transform -translate-x-1/2 md:top-2.5 md:bottom-auto md:left-auto md:right-2.5 md:translate-x-0
   "
         >
-          <button
-            aria-label="Play/Pause button"
-            className={controlTail}
-            onClick={handleAutoplayClick}
-          >
-            {autoplay ? (
-              <TooltipElement element={<Pause />} tooltip={"Pause Autoplay"} />
-            ) : (
-              <TooltipElement element={<Play />} tooltip={"Play Autoplay"} />
-            )}
-          </button>
+          {autoplay ? (
+            <TooltipElement
+              element={
+                <button
+                  aria-label="Play/Pause button"
+                  className={`${controlTail}`}
+                  onClick={handleAutoplayClick}
+                >
+                  <Pause />
+                </button>
+              }
+              tooltip={"Pause Autoplay"}
+            />
+          ) : (
+            <TooltipElement
+              element={
+                <button
+                  aria-label="Play/Pause button"
+                  className={`${controlTail}`}
+                  onClick={handleAutoplayClick}
+                >
+                  <Play />
+                </button>
+              }
+              tooltip={"Play Autoplay"}
+            />
+          )}
         </div>
       )}
       <Carousel
@@ -115,24 +131,34 @@ const MultiCarousel = (props: any) => {
 };
 
 const CustomArrow = ({ onClick, direction, ...rest }: any) => {
-  const iconTail = `p-1.5 md:p-2.5 bg-rose-200/[0.9] dark:bg-slate-700/[0.9] text-gray-700 dark:text-slate-300 
-    hover:bg-rose-300 dark:hover:bg-slate-600 transition-colors drop-shadow-lg`;
+  const buttonTail = `absolute z-10 rounded-md  ${
+    direction === "left" ? "left-2.5" : "right-2.5"
+  } h-fit w-fit 
+  top-1/2 transform -translate-y-1/2
+  ${controlTail}`;
   return (
-    <button
-      onClick={onClick}
-      className={`absolute z-10 rounded-md  ${
-        direction === "left" ? "left-5" : "right-5"
-      } h-fit w-fit 
-      top-1/2 transform -translate-y-1/2
-      ${iconTail}`}
-    >
+    <div>
       {direction === "left" ? (
-        <TooltipElement element={<StepBack />} tooltip={"Previous"} />
+        <TooltipElement
+          element={
+            <button onClick={onClick} className={buttonTail}>
+              <StepBack />
+            </button>
+          }
+          tooltip={"Previous"}
+        />
       ) : (
-        <TooltipElement element={<StepForward />} tooltip={"Next"} />
+        <TooltipElement
+          element={
+            <button onClick={onClick} className={buttonTail}>
+              <StepForward />
+            </button>
+          }
+          tooltip={"Next"}
+        />
       )}
-    </button>
+    </div>
   );
 };
 
-export default Hero;
+export default HeroCarousel;

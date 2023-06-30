@@ -28,7 +28,7 @@ const ReportContent = (props: any) => {
       hover:bg-rose-300 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600"
             >
               <ArrowLeftSquare className="m-1.5 sm:m-2" />
-              <p className="mr-1.5 sm:mr-2 text-sm sm:text-md">
+              <p className="mr-1.5 sm:mr-2 text-sm sm:text-md font-semibold">
                 Return to Events
               </p>
             </Link>
