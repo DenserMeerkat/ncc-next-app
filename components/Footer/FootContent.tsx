@@ -21,10 +21,10 @@ export const FootContent = () => {
       bg-slate-50 dark:bg-gray-900 drop-shadow-sm dark:drop-shadow-none`}
     >
       <div className="mt-8">
-        <h4 className="text-md font-bold px-8">
+        <h4 className="text-md font-bold pl-1 sm:px-8">
           NCC Army Wing, Anna University{" "}
         </h4>
-        <div className="px-7 mt-6 grid grid-cols-8 gap-y-5">
+        <div className="pl-2 sm:px-7 mt-6 grid grid-cols-8 gap-y-5">
           <MapPin className="col-span-1" size={20} />
           <div className="col-span-7">
             <p className="text-sm">

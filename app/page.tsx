@@ -1,12 +1,12 @@
-import HeroCarousel from "@/components/Home/Carousel";
-import HeroHead from "@/components/Home/HeroHead";
+import HomeCarousel from "@/components/Home/Carousel";
+import Hero from "@/components/Home/Hero";
 
 export default function Home() {
   return (
     <main>
       <div className="h-fit">
-        <HeroHead />
-        <HeroCarousel />
+        <Hero />
+        <HomeCarousel />
       </div>
     </main>
   );

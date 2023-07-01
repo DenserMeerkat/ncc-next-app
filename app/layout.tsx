@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={plusJakartaSans.className}>
+      <body
+        className={`${plusJakartaSans.className} selection:bg-rose-100 dark:selection:bg-slate-600`}
+      >
         <RootComponent>{children}</RootComponent>
       </body>
     </html>

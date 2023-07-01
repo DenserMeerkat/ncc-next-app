@@ -12,11 +12,30 @@ import "react-multi-carousel/lib/styles.css";
 const controlTail = `p-1.5 md:p-2.5 bg-rose-300/[0.9] dark:bg-slate-700/[0.95] text-gray-800 dark:text-slate-300 rounded-md
 hover:bg-rose-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
 
-export const HeroCarousel = () => {
+export const HomeCarousel = () => {
   const nccWallpaper = "/images/ncc_wallpaper.jpg";
   return (
     <div className="max-w-6xl mx-auto  mt-10 mb-10">
       <div className="p-0 md:p-2  ">
+        <div className="w-full pb-6 pt-4">
+          <h2
+            className="mx-auto text-center px-2 text-xs sm:text-sm md:text-md lg:text-lg font-medium py-2 md:px-8 rounded-md w-fit sm:border-2 
+          border-rose-200 bg-rose-100 dark:border-slate-700 dark:bg-slate-900"
+          >
+            <span className="text-red-900 dark:text-red-400 font-bold">
+              Unite
+            </span>
+            ,{" "}
+            <span className="text-blue-900 dark:text-blue-400 font-bold">
+              Train
+            </span>
+            ,{" "}
+            <span className="text-sky-900 dark:text-sky-400 font-bold">
+              Lead
+            </span>
+            &nbsp;:&nbsp; The Strength of Our Cadet Family
+          </h2>
+        </div>
         <div className="md:rounded-md border border-gray-400 dark:border-slate-700">
           <MultiCarousel
             images={[
@@ -161,4 +180,4 @@ const CustomArrow = ({ onClick, direction, ...rest }: any) => {
   );
 };
 
-export default HeroCarousel;
+export default HomeCarousel;

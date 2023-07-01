@@ -33,7 +33,7 @@ const AppBar = (props: any) => {
       className={`sticky top-0 border-b border-gray-300 dark:border-slate-800 z-50
     bg-slate-50/[0.5]  dark:bg-slate-950/[0.7] backdrop-filter backdrop-blur-lg`}
     >
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-2 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-1 sm:px-4 py-2 flex justify-between items-center">
         <Link
           href={"/"}
           className="flex dark:hover:bg-slate-900 hover:bg-rose-200 py-1.5 px-3 rounded-md items-center cursor-pointer

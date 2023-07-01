@@ -3,13 +3,17 @@ import React from "react";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
+import TooltipElement from "../common/TooltipElement";
 
-const HeroHead = () => {
+const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
   const nccShoulder = "/images/ncc_shoulder.png";
+  const logoBgTail = `rounded-xl bg-sky-50 dark:bg-slate-800 mix-blend-color-darken border-2 border-gray-300 dark:border-slate-700
+  transition-colors hover:bg-rose-200 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600`;
+  const logoTail = `flex items-center justify-center min-w-[80px]  max-w-[100px] w-[15%] aspect-[3/2] object-fit-contain object-center drop-shadow-sm`;
   return (
     <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip">
-      <div className="relative max-w-7xl  mx-auto grid grid-cols-12 min-h-screen">
+      <div className="relative max-w-7xl  mx-auto grid grid-cols-12 h-fit">
         <div className="pt-12 max-[900px]:col-span-12 max-[1200px]:col-span-7 max-[10000px]:col-span-6 px-2 flex flex-col max-[900px]:items-center">
           <div className="w-fit flex items-center mb-2 ml-1.5 px-1 pb-3 border-b-2">
             <div className=" mr-3 flex items-center ">
@@ -61,14 +65,12 @@ const HeroHead = () => {
               </Link>
             </button>
             <button
-              className={`py-1.5 px-4 md:py-2 md:px-6  rounded-md border-2 font-medium text-md tracking-wide border-gray-400 bg-slate-400/[0.7] 
-              text-white dark:text-white/[0.8] hover:bg-slate-400 hover:border-slate-400 transition-colors
+              className={`py-1.5 px-4 md:py-2 md:px-6  rounded-md border-2 font-semibold text-md tracking-wide border-gray-400 bg-slate-200/[0.7] 
+              text-gray-700 dark:text-white/[0.8] hover:bg-slate-300 hover:border-slate-500 transition-colors
               dark:border-slate-500 dark:bg-slate-700 dark:hover:bg-slate-800 dark:hover:border-slate-700`}
             >
               <Link href="#">
-                <p className="drop-shadow-[1px_2px_3px_rgba(0,0,0,0.5)]">
-                  Learn More
-                </p>
+                <p>Learn More</p>
               </Link>
             </button>
           </div>
@@ -88,8 +90,72 @@ const HeroHead = () => {
           </div>
         )}
       </div>
+      <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10">
+        <div className={`${logoTail} p-3`}>
+          <TooltipElement
+            element={
+              <img
+                src="/images/logos/ncc_icon_png.png"
+                alt="National Cadet Corps Logo"
+              />
+            }
+            tooltip={"National Cadet Corps"}
+          />
+        </div>
+        <div className={`${logoTail} p-2`}>
+          <TooltipElement
+            element={
+              <img
+                src="/images/logos/AU_logo_1.png"
+                alt="Anna University Logo"
+              />
+            }
+            tooltip={"Anna University"}
+          />
+        </div>
+        <div className={`${logoTail} p-2`}>
+          <TooltipElement
+            element={
+              <img
+                src="/images/logos/CEG_col.png"
+                alt="College of Engineering Guindy Logo"
+              />
+            }
+            tooltip={"College of Engineering, Guindy"}
+          />
+        </div>
+        <div className={`${logoTail} p-2`}>
+          <TooltipElement
+            element={
+              <img
+                src="/images/logos/ACT_logo_2.png"
+                alt="Alagappa College of Technology Logo"
+              />
+            }
+            tooltip={"Alagappa College of Technology"}
+          />
+        </div>
+        <div className={logoTail}>
+          <TooltipElement
+            element={
+              <img
+                src="/images/logos/azadi_ka_amrit_1.png"
+                alt="Azadi Ka Amrit Mahotsav Logo"
+              />
+            }
+            tooltip={"Azadi Ka Amrit Mahotsav"}
+          />
+        </div>
+      </div>
+      <div className=" max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
+        <p>
+          Creating organized, trained, and motivated youth, equipped to provide
+          leadership in every sphere of life, and unwaveringly committed to
+          serving our nation.
+        </p>
+      </div>
     </div>
   );
 };
 
-export default HeroHead;
+export default Hero;
