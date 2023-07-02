@@ -12,7 +12,7 @@ const Hero = () => {
   const nccFlag = "/images/logos/ncc_flag.png";
   const logoBgTail = `rounded-xl bg-sky-50 dark:bg-slate-800 mix-blend-color-darken border-2 border-gray-300 dark:border-slate-700
   transition-colors hover:bg-rose-200 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600`;
-  const logoTail = `flex items-center justify-center min-w-[80px]  max-w-[100px] w-[15%] aspect-[3/2] object-fit-contain object-center drop-shadow-sm`;
+  const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
   return (
     <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip  h-fit">
       <div className="relative max-w-7xl  mx-auto grid grid-cols-12  h-fit">
@@ -92,7 +92,9 @@ const Hero = () => {
         <div className={`${logoTail} p-3`}>
           <TooltipElement
             element={
-              <img
+              <Image
+                height={100}
+                width={100}
                 src="/images/logos/ncc_icon_png.png"
                 alt="National Cadet Corps Logo"
               />
@@ -103,7 +105,9 @@ const Hero = () => {
         <div className={`${logoTail} p-2`}>
           <TooltipElement
             element={
-              <img
+              <Image
+                height={80}
+                width={80}
                 src="/images/logos/AU_logo_1.png"
                 alt="Anna University Logo"
               />
@@ -114,7 +118,9 @@ const Hero = () => {
         <div className={`${logoTail} p-2`}>
           <TooltipElement
             element={
-              <img
+              <Image
+                height={100}
+                width={100}
                 src="/images/logos/CEG_col.png"
                 alt="College of Engineering Guindy Logo"
               />
@@ -125,7 +131,9 @@ const Hero = () => {
         <div className={`${logoTail} p-2`}>
           <TooltipElement
             element={
-              <img
+              <Image
+                height={100}
+                width={100}
                 src="/images/logos/ACT_logo_2.png"
                 alt="Alagappa College of Technology Logo"
               />
@@ -136,8 +144,10 @@ const Hero = () => {
         <div className={logoTail}>
           <TooltipElement
             element={
-              <img
-                src="/images/logos/azadi_ka_amrit_1.png"
+              <Image
+                height={120}
+                width={120}
+                src="/images/logos/azadi_ka_amrit_2.png"
                 alt="Azadi Ka Amrit Mahotsav Logo"
               />
             }
