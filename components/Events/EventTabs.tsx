@@ -2,17 +2,25 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { CalendarDays } from "lucide-react";
+import SectionHeading from "../common/SectionHeading";
 
 export const EventTabs = (props: any) => {
   const years: Record<string, React.ReactElement<any>[]> = props.years;
   const contentTail =
-    "mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 justify-center m-0";
+    "mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center m-0";
   const currentYear: string = new Date().getFullYear().toString();
   return (
     <div className="px-10 md:px-0 my-10 mx-auto max-w-5xl">
+      <SectionHeading
+        className={"mb-10"}
+        icon={CalendarDays}
+        title={"Event Reports"}
+      />
+
       <Tabs
         defaultValue={currentYear}
-        className="flex flex-col items-center sm:items-start sm:flex-row gap-10 justify-center"
+        className="flex flex-col items-center sm:items-start sm:flex-row gap-10 px-8"
       >
         <TabsList
           aria-label="tabs example"

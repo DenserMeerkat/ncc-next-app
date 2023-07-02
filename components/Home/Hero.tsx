@@ -4,30 +4,28 @@ import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import TooltipElement from "../common/TooltipElement";
+import SectionHeading from "../common/SectionHeading";
 
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
   const nccShoulder = "/images/ncc_shoulder.png";
+  const nccFlag = "/images/logos/ncc_flag.png";
   const logoBgTail = `rounded-xl bg-sky-50 dark:bg-slate-800 mix-blend-color-darken border-2 border-gray-300 dark:border-slate-700
   transition-colors hover:bg-rose-200 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600`;
   const logoTail = `flex items-center justify-center min-w-[80px]  max-w-[100px] w-[15%] aspect-[3/2] object-fit-contain object-center drop-shadow-sm`;
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip">
-      <div className="relative max-w-7xl  mx-auto grid grid-cols-12 h-fit">
+    <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip  h-fit">
+      <div className="relative max-w-7xl  mx-auto grid grid-cols-12  h-fit">
         <div className="pt-12 max-[900px]:col-span-12 max-[1200px]:col-span-7 max-[10000px]:col-span-6 px-2 flex flex-col max-[900px]:items-center">
-          <div className="w-fit flex items-center mb-2 ml-1.5 px-1 pb-3 border-b-2">
-            <div className=" mr-3 flex items-center ">
-              <Image
-                width={20}
-                height={20}
-                src="/images/logos/ncc_flag.png"
-                alt="NCC logo"
-              />
-            </div>
-            <p className="text-sm tracking-widest font-medium">
-              National Cadet Corps
-            </p>
-          </div>
+          <SectionHeading
+            className="mb-2"
+            customIcon={
+              <div className=" flex items-center ">
+                <Image width={20} height={20} src={nccFlag} alt="NCC Flag" />
+              </div>
+            }
+            title={"National Cadet Corps"}
+          />
           <div className="mt-3">
             <h1 className="max-[500px]:max-w-[380px] md:max-w-[580px] lg:max-w-[620px] leading-tight text-[1.75em] min-[500px]:text-[2.75em]  min-[1100px]:text-[3.75em] font-bold text-gray-900 dark:text-slate-200 max-[900px]:text-center">
               Empowering{" "}

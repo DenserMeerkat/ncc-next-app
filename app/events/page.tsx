@@ -1,6 +1,7 @@
 import getReportMetadata from "../../components/utils/getReportMetadata";
 import ReportPreview from "@/components/Events/ReportPreview";
 import { EventTabs } from "@/components/Events/EventTabs";
+import EventInfo from "@/components/Events/EventInfo";
 
 export default function Events() {
   const reportMetadata = getReportMetadata();
@@ -14,6 +15,7 @@ export default function Events() {
   });
   return (
     <main>
+      <EventInfo />
       <EventTabs years={years} />
     </main>
   );
