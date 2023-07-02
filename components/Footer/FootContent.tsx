@@ -58,24 +58,32 @@ export const FootContent = () => {
         <SocialLink
           href={"https://www.instagram.com/nccarmyannauniv/"}
           hoverColor={"hover:bg-pink-200"}
+          hoverTextColor={"hover:text-pink-700"}
+          darkHoverColor={"dark:hover:text-pink-400"}
           icon={<Instagram />}
           tooltip={"Instagram"}
         />
         <SocialLink
           href={"https://www.facebook.com/nccarmy.annauniv"}
           hoverColor={"hover:bg-blue-200"}
+          hoverTextColor={"hover:text-blue-700"}
+          darkHoverColor={"dark:hover:text-blue-400"}
           icon={<Facebook />}
           tooltip={"Facebook"}
         />
         <SocialLink
           href={"https://www.linkedin.com/company/ncc-army-anna-university/"}
           hoverColor={"hover:bg-sky-200"}
+          hoverTextColor={"hover:text-sky-700"}
+          darkHoverColor={"dark:hover:text-sky-400"}
           icon={<Linkedin />}
           tooltip={"LinkedIn"}
         />
         <SocialLink
           href={"https://www.youtube.com/@nccarmyannauniv.5771"}
           hoverColor={"hover:bg-rose-200"}
+          hoverTextColor={"hover:text-rose-700"}
+          darkHoverColor={"dark:hover:text-rose-400"}
           icon={<Youtube />}
           tooltip={"Youtube"}
         />
@@ -90,19 +98,21 @@ const SocialLink = (porps: any) => {
   const href = porps.href;
   const icon = porps.icon;
   const hoverColor = porps.hoverColor;
+  const hoverTextColor = porps.hoverTextColor;
+  const darkHoverColor = porps.darkHoverColor;
   const tooltip = porps.tooltip;
   const socialTail = `flex items-center justify-around 
   p-2 rounded-md border cursor-pointer 
   dark:hover:bg-slate-800 transition
   border-gray-400 dark:border-slate-700
-  text-gray-700 dark:text-slate-300`;
+  text-gray-700 dark:text-slate-300 `;
   return (
     <TooltipElement
       element={
         <Link
           href={href}
           target="_blank"
-          className={`${socialTail} ${hoverColor}`}
+          className={`${socialTail} ${hoverColor} ${hoverTextColor} ${darkHoverColor}`}
         >
           {icon}
         </Link>

@@ -37,7 +37,7 @@ const EventCard = (props: any) => {
     <div
       key={id}
       className="flex items-center gap-4 lg:px-8 flex-col min-[700px]:even:flex-row-reverse min-[700px]:odd:flex-row lg:rounded-lg py-6 border 
-      border-rose-200 bg-rose-100  dark:border-slate-700 dark:bg-slate-800 "
+      odd:border-blue-200 even:border-rose-200 odd:bg-blue-100 even:bg-rose-100  even:dark:border-slate-700 odd:dark:border-slate-700 odd:dark:bg-slate-800 even:dark:bg-slate-800/[0.5] "
     >
       <TooltipElement
         element={

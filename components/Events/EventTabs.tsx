@@ -11,7 +11,7 @@ export const EventTabs = (props: any) => {
     "mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center m-0";
   const currentYear: string = new Date().getFullYear().toString();
   return (
-    <div className="px-10 md:px-0 my-10 mx-auto max-w-5xl">
+    <div className="px-2 md:px-0 my-10 mx-auto max-w-5xl">
       <SectionHeading
         className={"mb-10"}
         icon={CalendarDays}

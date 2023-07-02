@@ -33,7 +33,7 @@ const ReportPreview = (props: any) => {
         <div className="flex justify-end">
           <p
             className="w-max text-xs font-medium dark:text-slate-400 rounded-sm
-          mt-2 px-2 py-0.5 bg-gray-200 dark:bg-slate-800/[0.8] "
+          mt-2 px-2 py-0.5 bg-sky-100 dark:bg-slate-800/[0.8] "
           >
             {formattedDate}
           </p>

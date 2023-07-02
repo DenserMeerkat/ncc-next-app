@@ -20,12 +20,12 @@ const ButtonGroup = React.forwardRef<ButtonGroupRef>((props: any, ref) => {
     handleNavChange,
   }));
 
-  const dividerTail = `min-h-[1em] w-px self-stretch  bg-gray-400 dark:bg-slate-700 select-none`;
+  const dividerTail = `min-h-[1em] w-px self-stretch  bg-rose-300 dark:bg-slate-700 select-none`;
   const commonTail = ` py-1 px-5 text-md  select-none transition`;
   const buttonTail = `bg-slate-50 dark:bg-slate-950 font-semibold dark:hover:bg-slate-900 hover:bg-rose-200 ${commonTail}`;
   const activeTail = `bg-red-300 dark:bg-slate-700 font-bold ${commonTail}`;
   return (
-    <nav className="flex items-center rounded-md border border-gray-400 dark:border-slate-700 overflow-hidden">
+    <nav className="flex items-center rounded-md border border-rose-300 dark:border-slate-700 overflow-hidden">
       <Link
         href={"/"}
         onClick={() => setActive("home")}

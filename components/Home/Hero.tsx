@@ -89,7 +89,7 @@ const Hero = () => {
         )}
       </div>
       <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10">
-        <div className={`${logoTail} p-3`}>
+        <div className={`${logoTail} p-4`}>
           <TooltipElement
             element={
               <Image
@@ -102,7 +102,7 @@ const Hero = () => {
             tooltip={"National Cadet Corps"}
           />
         </div>
-        <div className={`${logoTail} p-2`}>
+        <div className={`${logoTail} p-3`}>
           <TooltipElement
             element={
               <Image
