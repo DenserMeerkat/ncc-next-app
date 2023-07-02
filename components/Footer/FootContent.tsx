@@ -16,9 +16,9 @@ export const FootContent = () => {
   return (
     <div
       className={`rounded-md m-2 border border-gray-300 dark:border-slate-700 
-      min-w-[300px] w-full max-w-xl lg:w-max h-max
+      min-w-[300px] w-full max-w-xl sm:w-full xl:w-max lg:h-96
       flex flex-col justify-between px-6 
-      bg-slate-50 dark:bg-gray-900 drop-shadow-sm dark:drop-shadow-none`}
+      bg-white dark:bg-gray-900 drop-shadow-sm dark:drop-shadow-none`}
     >
       <div className="mt-8">
         <h4 className="text-md font-bold pl-1 sm:px-8">
@@ -54,7 +54,8 @@ export const FootContent = () => {
         </div>
       </div>
       <br />
-      <div className="flex flex-wrap justify-around px-4 border-t py-4">
+      <div className="border-t mx-4"></div>
+      <div className="mx-auto max-w-[400px] gap-3 sm:gap-5 md:gap-10 flex flex-wrap justify-around px-4  py-4">
         <SocialLink
           href={"https://www.instagram.com/nccarmyannauniv/"}
           hoverColor={"hover:bg-pink-200"}
