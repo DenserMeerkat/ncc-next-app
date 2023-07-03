@@ -36,6 +36,7 @@ const AboutHead = () => {
         <div className="grid grid-cols-12 ">
           {objectives.map((objective) => (
             <ObjectiveCard
+              key={objective.id}
               id={objective.id}
               title={objective.title}
               desc={objective.desc}
