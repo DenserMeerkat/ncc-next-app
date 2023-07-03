@@ -2,7 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, FileText } from "lucide-react";
 import SectionHeading from "../common/SectionHeading";
 
 export const EventTabs = (props: any) => {
@@ -14,7 +14,7 @@ export const EventTabs = (props: any) => {
     <div className="px-2 md:px-0 my-10 mx-auto max-w-5xl">
       <SectionHeading
         className={"mb-10"}
-        icon={CalendarDays}
+        icon={FileText}
         title={"Event Reports"}
       />
 

@@ -31,7 +31,7 @@ const AppBar = (props: any) => {
   return (
     <header
       className={`sticky top-0 border-b border-gray-400 dark:border-slate-800 z-50
-    bg-red-200/[0.5]  dark:bg-slate-950/[0.7] backdrop-filter backdrop-blur-lg`}
+    bg-red-200/[0.4]  dark:bg-slate-950/[0.7] backdrop-filter backdrop-blur-lg`}
     >
       <div className="max-w-7xl mx-auto px-1 sm:px-4 py-2 flex justify-between items-center">
         <Link

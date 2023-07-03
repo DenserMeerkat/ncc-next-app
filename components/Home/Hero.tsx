@@ -44,7 +44,7 @@ const Hero = () => {
             </h1>
           </div>
           <br />
-          <p className="max-w-[620px] px-1 pr-2 text-md text-gray-700 dark:text-slate-400 max-[900px]:text-center">
+          <p className="max-w-[620px] px-1 pr-2 text-sm sm:text-base text-gray-700 dark:text-slate-400 max-[900px]:text-center">
             Prepare yourself for a lifetime of leadership and excellence. Unlock
             opportunities, embrace challenges, and create lasting memories. Join
             us on a journey of courage, character, and service.
@@ -77,7 +77,7 @@ const Hero = () => {
           <div className="max-[900px]:col-span-0 max-[1200px]:col-span-5 max-[10000px]:col-span-7 sm:col-span-5">
             <div
               className="relative md:w-[700px] md:h-[500px] xl:w-[760px] xl:h-[530px] 2xl:w-[760px] 2xl:h-[530px] 
-            rounded-bl-3xl overflow-clip drop-shadow-md border-b-2 border-l-2 border-slate-700"
+            rounded-bl-3xl overflow-clip drop-shadow-md border-b-2 border-r-2 border-l-2 border-transparent dark:border-slate-700"
             >
               <Image
                 src={nccShoulder}
@@ -155,7 +155,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className=" max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
+      <div className="text-sm sm:text-base max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
         <p>
           Creating organized, trained, and motivated youth, equipped to provide
           leadership in every sphere of life, and unwaveringly committed to

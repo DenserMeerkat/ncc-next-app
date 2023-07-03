@@ -14,7 +14,7 @@ export default function Events() {
     ];
   });
   return (
-    <main>
+    <main className="pb-10">
       <EventInfo />
       <EventTabs years={years} />
     </main>

@@ -9,8 +9,8 @@ import { useMediaQuery } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const controlTail = `p-1.5 md:p-2.5 bg-rose-300/[0.9] dark:bg-slate-700/[0.95] text-gray-800 dark:text-slate-300 rounded-md
-hover:bg-rose-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
+const controlTail = `p-1.5 md:p-2.5 bg-sky-300/[0.9] dark:bg-slate-700/[0.95] text-gray-800 dark:text-slate-300 rounded-md
+hover:bg-sky-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
 
 export const HomeCarousel = () => {
   const nccWallpaper = "/images/ncc_wallpaper.jpg";

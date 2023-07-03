@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionHeading from "../common/SectionHeading";
 import { SquareGantt } from "lucide-react";
-import eventInfo from "../utils/eventInfo";
+import eventInfo from "../resources/eventInfo.ts";
 import TooltipElement from "../common/TooltipElement";
 
 const EventInfo = () => {
@@ -50,7 +50,7 @@ const EventCard = (props: any) => {
 
       <div className="">
         <h2 className="text-center font-bold text-xl mb-2">{title}</h2>
-        <p className="text-md text-gray-700 dark:text-slate-400 pl-4 indent-10 ">
+        <p className="text-sm sm:text-base text-gray-700 dark:text-slate-400 text-justify px-4  lg:px-0 indent-10 ">
           {description}
         </p>
       </div>

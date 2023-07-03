@@ -5,8 +5,7 @@ const SectionHeading = (props: any) => {
   const customIcon = props.customIcon;
   const IconComponent = props.icon;
   const title = props.title;
-  const iconTail =
-    "p-1.5 w-7 h-7 mr-1.5 rounded-md border border-sky-300 dark:border-slate-700  bg-sky-200 dark:bg-slate-800";
+  const iconTail = `p-1.5 w-7 h-7 mr-1.5 rounded-md border border-sky-300 dark:border-slate-700  bg-sky-200 dark:bg-slate-800`;
   return (
     <div
       className={`w-fit flex items-center ml-1.5 px-1 pb-3 border-b-2 ${className}`}
