@@ -15,16 +15,16 @@ import TooltipElement from "../common/TooltipElement";
 export const FootContent = () => {
   return (
     <div
-      className={`rounded-md m-2 border border-gray-300 dark:border-slate-700 
+      className={`rounded-sm sm:rounded-md m-2 border border-gray-300 dark:border-slate-700 
       min-w-[300px] w-full max-w-xl sm:w-full xl:w-max lg:h-96
       flex flex-col justify-between px-6 
-      bg-white dark:bg-gray-900 drop-shadow-sm dark:drop-shadow-none`}
+      bg-slate-50 dark:bg-slate-950/[0.3] drop-shadow-sm dark:drop-shadow-none`}
     >
       <div className="mt-8">
         <h4 className="text-md font-bold pl-1 sm:px-8">
           NCC Army Wing, Anna University{" "}
         </h4>
-        <div className="pl-2 sm:px-7 mt-6 grid grid-cols-8 gap-y-5">
+        <div className="pl-2 sm:px-7 mt-6 grid grid-cols-8  gap-y-3 lg:gap-y-5">
           <MapPin className="col-span-1" size={20} />
           <div className="col-span-7">
             <p className="text-sm">

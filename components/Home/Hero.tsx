@@ -27,7 +27,10 @@ const Hero = () => {
             title={"National Cadet Corps"}
           />
           <div className="mt-3">
-            <h1 className="max-[500px]:max-w-[380px] md:max-w-[580px] lg:max-w-[620px] leading-tight text-[1.75em] min-[500px]:text-[2.75em]  min-[1100px]:text-[3.75em] font-bold text-gray-900 dark:text-slate-200 max-[900px]:text-center">
+            <h1
+              className="max-[500px]:max-w-[380px] max-[1100px]:max-w-[580px] max-[4000px]:max-w-[620px ] leading-tight
+              max-[500px]:text-[1.75em] max-[1100px]:text-[2.75em]  max-[1300px]:text-[3.5em] max-[9300px]:text-[3.75em] font-bold text-gray-900 dark:text-slate-200 max-[900px]:text-center"
+            >
               Empowering{" "}
               <span className="text-rose-800 dark:text-rose-500 font-extrabold">
                 youth
