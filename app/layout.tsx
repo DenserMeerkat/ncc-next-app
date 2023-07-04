@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import RootComponent from "./ThemeWrapper.tsx";
+import RootComponent from "./Wrappers.tsx";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],

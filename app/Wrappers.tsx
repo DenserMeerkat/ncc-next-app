@@ -2,6 +2,7 @@
 import AppBar from "@/components/AppBar/AppBar";
 import Footer from "@/components/Footer/Footer";
 import { ThemeProvider } from "next-themes";
+import { AppStateProvider } from "@/components/utils/AppStateContext";
 
 export default function RootComponet({
   children,
@@ -10,9 +11,11 @@ export default function RootComponet({
 }) {
   return (
     <ThemeProvider enableSystem defaultTheme="dark" attribute="class">
-      <AppBar />
-      {children}
-      <Footer />
+      <AppStateProvider>
+        <AppBar />
+        {children}
+        <Footer />
+      </AppStateProvider>
     </ThemeProvider>
   );
 }

@@ -10,7 +10,7 @@ const AboutHead = () => {
         <SectionHeading className="mb-6" icon={Info} title="About NCC" />
         <div>
           <p
-            className="text-justify px-2 sm:px-4 text-xs min-[400px]:text-sm md:text-base
+            className="text-justify px-2 sm:px-4 text-sm md:text-base
           dark:text-slate-300"
           >
             The National Cadet Corps (NCC) is a premier youth development
@@ -57,7 +57,7 @@ const ObjectiveCard = (props: any) => {
   return (
     <div
       key={id}
-      className="col-span-12 md:col-span-6 lg:col-span-4 
+      className="col-span-12 min-[570px]:col-span-6 lg:col-span-4 
     m-2 p-4 border-2 rounded-md
     odd:border-rose-200 odd:bg-rose-100
     even:border-sky-200 even:bg-sky-100
@@ -66,9 +66,11 @@ const ObjectiveCard = (props: any) => {
     >
       <div className="flex">
         <Goal className="mr-3 text-sky-700 dark:text-rose-300" />
-        <h3 className="text-base font-bold mb-2">{title}</h3>
+        <h3 className="text-sm sm:text-base font-medium md:font-bold mb-2">
+          {title}
+        </h3>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col">
         <p className="text-sm text-gray-800 dark:text-slate-400">{desc}</p>
       </div>
     </div>

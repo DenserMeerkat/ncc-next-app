@@ -6,22 +6,25 @@ import {
   SheetHeader,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import React from "react";
+import { AppStateContext } from "../utils/AppStateContext";
 
 const NavSheet = (props: any) => {
+  // Props
   var open = props.open;
   const onOpenChange = props.onOpenChange;
-  const handleClick = props.handleClick;
+
+  // Tailwind CSS
   const commonTail = `my-3 px-8 py-2 rounded-md border select-none text-center`;
   const buttonTail = `${commonTail} border-gray-400 hover:bg-rose-200 dark:hover:bg-slate-800 dark:border-slate-700 
   text-gray-900 dark:text-slate-300 font-semibold transition-colors`;
   const activeTail = `${commonTail} bg-red-300 dark:bg-slate-700 pointer-events-none font-extrabold 
   border-rose-500 dark:border-slate-600 text-gray-900 dark:text-slate-300`;
-  const [isSmallWindow, setIsSmallWindow] = useState(false);
 
+  // Hooks
+  const [isSmallWindow, setIsSmallWindow] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setIsSmallWindow(window.innerHeight < 350);
@@ -35,17 +38,18 @@ const NavSheet = (props: any) => {
     };
   }, []);
 
-  const pathname = usePathname();
-  const currentPage = pathname.split("/")[1];
-  const [active, setActive] = useState(
-    currentPage === "" ? "home" : currentPage
-  );
-
-  const handleNavClick = (page: string) => {
-    setActive(page);
-    handleClick(page);
+  // Context
+  const state = useContext(AppStateContext);
+  if (!state) {
+    throw new Error("AppStateContext must be used within an AppStateProvider");
+  }
+  const { activePage, setActivePage } = state;
+  const handleNavItemClick = (page: string) => {
+    setActivePage(page);
     onOpenChange(false);
   };
+
+  // Render
   return (
     <Sheet defaultOpen={false} open={open} onOpenChange={onOpenChange}>
       <SheetContent className="w-[200px] rounded-l-md ">
@@ -59,29 +63,36 @@ const NavSheet = (props: any) => {
             >
               <Link
                 href={"/"}
-                onClick={() => handleNavClick("home")}
-                className={active === "home" ? activeTail : buttonTail}
+                onClick={() => handleNavItemClick("home")}
+                className={activePage === "home" ? activeTail : buttonTail}
               >
                 Home
               </Link>
               <Link
                 href={"/about"}
-                onClick={() => handleNavClick("about")}
-                className={active === "about" ? activeTail : buttonTail}
+                onClick={() => handleNavItemClick("about")}
+                className={activePage === "about" ? activeTail : buttonTail}
               >
                 About
               </Link>
               <Link
+                href={"/members"}
+                onClick={() => handleNavItemClick("members")}
+                className={activePage === "members" ? activeTail : buttonTail}
+              >
+                Members
+              </Link>
+              <Link
                 href={"/events"}
-                onClick={() => handleNavClick("events")}
-                className={active === "events" ? activeTail : buttonTail}
+                onClick={() => handleNavItemClick("events")}
+                className={activePage === "events" ? activeTail : buttonTail}
               >
                 Events
               </Link>
               <Link
                 href={"/gallery"}
-                onClick={() => handleNavClick("gallery")}
-                className={active === "gallery" ? activeTail : buttonTail}
+                onClick={() => handleNavItemClick("gallery")}
+                className={activePage === "gallery" ? activeTail : buttonTail}
               >
                 Gallery
               </Link>
