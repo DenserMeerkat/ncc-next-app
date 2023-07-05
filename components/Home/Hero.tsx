@@ -56,7 +56,7 @@ const Hero = () => {
           <div className="flex flex-col gap-6 min-[900px]:gap-6 min-[900px]:flex-row">
             <button
               className={`py-1.5 px-4 md:py-2 md:px-6 rounded-md border border-rose-400 dark:border-blue-500 bg-rose-400 dark:bg-blue-500 text-white
-              hover:border-rose-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-rose-500 transition-colors
+              hover:border-rose-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-rose-500 transition-colors select-none
               font-medium text-lg [word-spacing:3px] font-sans`}
             >
               <Link href="#">
@@ -67,7 +67,7 @@ const Hero = () => {
             </button>
             <button
               className={`py-1.5 px-4 md:py-2 md:px-6  rounded-md border-2 font-semibold text-md tracking-wide border-gray-400 bg-slate-200/[0.7] 
-              text-gray-700 dark:text-white/[0.8] hover:bg-slate-300 hover:border-slate-500 transition-colors
+              text-gray-700 dark:text-white/[0.8] hover:bg-slate-300 hover:border-slate-500 transition-colors select-none
               dark:border-slate-500 dark:bg-slate-700 dark:hover:bg-slate-800 dark:hover:border-slate-700`}
             >
               <Link href="#">
@@ -91,7 +91,7 @@ const Hero = () => {
           </div>
         )}
       </div>
-      <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10">
+      <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10 select-text">
         <div className={`${logoTail} p-4`}>
           <TooltipElement
             element={
