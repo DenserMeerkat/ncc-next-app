@@ -62,15 +62,15 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
   const cardTail = `border-2 rounded-md p-4 bg-sky-100 dark:bg-slate-900 dark:border-slate-800 opacity-100 transition-opacity duration-500`;
   const inactiveCardTail = `hidden opacity-0 transition-opacity duration-500`;
 
-  const titleTail = `text-2xl font-bold text-sky-900 dark:text-sky-200`;
-  const shortTitleTail = `mr-3 px-2 py-0.5 rounded-lg text-base font-bold border
+  const titleTail = `text-xl lg:text-2xl font-bold text-sky-900 dark:text-sky-200`;
+  const shortTitleTail = `w-fit px-2 py-0.5 rounded-lg text-base font-bold border
       border-sky-400 dark:border-sky-600 bg-sky-200 dark:bg-sky-900 text-sky-950 dark:text-sky-200`;
 
   const iconTail = `p-1 mr-2 pl-0 text-rose-800 dark:text-rose-300/[0.7]`;
   const subHeadingTail = `text-base font-bold text-rose-900 dark:text-rose-300/[0.7]`;
 
-  const descTail = `pl-2 dark:text-sky-200/[0.7] mb-4`;
-  const activityTail = `pl-2 dark:text-sky-200/[0.7]`;
+  const descTail = `pl-2 text-sm sm:text-base dark:text-sky-200/[0.7] mb-4`;
+  const activityTail = `pl-2 text-sm sm:text-base dark:text-sky-200/[0.7]`;
 
   function subHeading(Icon: any, title: string) {
     return (
@@ -83,14 +83,13 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
   //Render
   return (
     <div key={id} className={active ? cardTail : inactiveCardTail}>
-      <div className="flex items-center mb-2 pl-2 pb-3 border-b">
+      <div className="flex flex-col min-[500px]:flex-row items:start min-[500px]:items-center gap-2 mb-2 pl-2 pb-3 border-b">
         <p className={shortTitleTail}>{shortTitle}</p>
         <h3 className={titleTail}>{title}</h3>
       </div>
-      <div className="flex justify-end"></div>
       {subHeading(Text, "Description")}
       <p className={descTail}>{desc}</p>
-      <div className="flex items-end justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between">
         <div>
           {subHeading(List, "Activities")}
           <ul className="list-disc list-inside ">
@@ -101,13 +100,15 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
             ))}
           </ul>
         </div>
-        <div
-          className="flex items-center border-2 px-1 pr-2.5 py-0.5 rounded-md
+        <div className="flex justify-end mt-3 min-[500px]:mt-0">
+          <div
+            className="flex items-center border-2 px-1 pr-2.5 py-0.5 rounded-md
         bg-slate-50 dark:bg-slate-950 text-sky-900 dark:text-cyan-300
         font-bold  dark:font-medium"
-        >
-          <Hourglass className="p-1.5 mr-1" />
-          <p className="text-sm">{duration}</p>
+          >
+            <Hourglass className="p-[0.425rem] sm:p-1.5 mr-1" />
+            <p className="text-xs sm:text-sm ">{duration}</p>
+          </div>
         </div>
       </div>
     </div>
