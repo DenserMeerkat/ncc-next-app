@@ -5,7 +5,7 @@ import { FlagTriangleRight } from "lucide-react";
 const AboutVideo = () => {
   return (
     <div className=" relative h-max py-10">
-      <div className=" max-w-5xl mx-auto">
+      <div className=" max-w-6xl mx-auto">
         <SectionHeading
           className="mb-6"
           icon={FlagTriangleRight}

@@ -8,7 +8,7 @@ const CampButton = (props: any) => {
   const onClick = props.onClick;
 
   //Tailwind CSS
-  const buttonTail = `border rounded-md col-span-3 flex px-6 py-3 transition-colors select-none`;
+  const buttonTail = `border rounded-md col-span-3 sm:col-span-2 md:col-span-3 flex px-6 py-3 transition-colors select-none`;
   const activeTail = `bg-sky-200/[0.8] dark:bg-slate-800/[0.9] text-sky-950 dark:text-slate-100 border-sky-300 dark:border-slate-700 `;
 
   const iconTail = `p-0.5 mr-3`;
@@ -83,13 +83,13 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
   //Render
   return (
     <div key={id} className={active ? cardTail : inactiveCardTail}>
-      <div className="flex flex-col min-[500px]:flex-row items:start min-[500px]:items-center gap-2 mb-2 pl-2 pb-3 border-b">
+      <div className="flex flex-col min-[460px]:flex-row items:start min-[460px]:items-center gap-2 mb-2 pl-2 pb-3 border-b">
         <p className={shortTitleTail}>{shortTitle}</p>
         <h3 className={titleTail}>{title}</h3>
       </div>
       {subHeading(Text, "Description")}
       <p className={descTail}>{desc}</p>
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between">
+      <div className="flex flex-col min-[420px]:flex-row min-[420px]:items-end justify-between">
         <div>
           {subHeading(List, "Activities")}
           <ul className="list-disc list-inside ">
@@ -100,7 +100,7 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
             ))}
           </ul>
         </div>
-        <div className="flex justify-end mt-3 min-[500px]:mt-0">
+        <div className="flex justify-end mt-3 min-[460px]:mt-0">
           <div
             className="flex items-center border-2 px-1 pr-2.5 py-0.5 rounded-md
         bg-slate-50 dark:bg-slate-950 text-sky-900 dark:text-cyan-300
