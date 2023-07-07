@@ -94,8 +94,10 @@ const CampCard: React.FC<CampCardProps & React.HTMLProps<HTMLDivElement>> = ({
         <div>
           {subHeading(List, "Activities")}
           <ul className="list-disc list-inside ">
-            {activities.map((activity: string) => (
-              <li className={activityTail}>{activity}</li>
+            {activities.map((activity: string, index) => (
+              <li key={index} className={activityTail}>
+                {activity}
+              </li>
             ))}
           </ul>
         </div>

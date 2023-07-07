@@ -8,7 +8,7 @@ import { CampButton, CampCard } from "./CampComps";
 const AboutCamp = () => {
   const [active, setActive] = useState(0);
   return (
-    <div className=" relative h-max py-10">
+    <div className=" relative h-max py-12 pb-16">
       <div className=" max-w-5xl mx-auto">
         <SectionHeading icon={Tent} title="Camps in NCC" className={"mb-4"} />
         <div className="grid grid-cols-12 gap-4">
