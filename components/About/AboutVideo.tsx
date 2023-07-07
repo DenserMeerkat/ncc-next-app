@@ -4,7 +4,7 @@ import { FlagTriangleRight } from "lucide-react";
 
 const AboutVideo = () => {
   return (
-    <div className=" relative overflow-clip h-max py-10">
+    <div className=" relative h-max py-10">
       <div className=" max-w-5xl mx-auto">
         <SectionHeading
           className="mb-6"

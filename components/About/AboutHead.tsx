@@ -5,7 +5,7 @@ import objectives from "../resources/objectives.ts";
 
 const AboutHead = () => {
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip h-max py-10">
+    <div className="bg-slate-100 dark:bg-slate-900 relative h-max py-10">
       <div className=" max-w-5xl mx-auto">
         <SectionHeading className="mb-6" icon={Info} title="About NCC" />
         <div>
@@ -65,7 +65,7 @@ const ObjectiveCard = (props: any) => {
     dark:even:border-slate-700 dark:even:bg-slate-800"
     >
       <div className="flex">
-        <Goal className="mr-3 text-sky-700 dark:text-rose-300" />
+        <Goal className="p-0.5 mr-3 text-rose-900 font-extrabold dark:text-rose-300" />
         <h3 className="text-sm sm:text-base font-medium md:font-bold mb-2">
           {title}
         </h3>
