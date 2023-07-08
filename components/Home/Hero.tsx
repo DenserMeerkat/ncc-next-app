@@ -5,7 +5,7 @@ import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import TooltipElement from "../common/TooltipElement";
 import SectionHeading from "../common/SectionHeading";
-import { heroLogos, heroCarousel } from "@/resources/hero";
+import { heroLogos } from "@/resources/hero";
 
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
@@ -93,8 +93,8 @@ const Hero = () => {
         )}
       </div>
       <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10 select-text">
-        {heroLogos.map((image) => (
-          <div className={`${logoTail} p-${image.padding}`}>
+        {heroLogos.map((image: any, index: number) => (
+          <div key={index} className={`${logoTail} p-${image.padding}`}>
             <TooltipElement
               element={
                 <Image

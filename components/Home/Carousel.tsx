@@ -1,10 +1,10 @@
 "use client";
 import TooltipElement from "../common/TooltipElement";
 import { Pause, Play, StepForward, StepBack } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
-import { heroLogos, heroCarousel } from "@/resources/hero";
+import { heroCarousel } from "@/resources/hero";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -119,7 +119,7 @@ const MultiCarousel = (props: any) => {
         removeArrowOnDeviceType={[]}
         className="max-w-6xl md:rounded-md overflow-hidden mx-auto"
       >
-        {heroCarousel.map((image, index: number) => (
+        {heroCarousel.map((image: any, index: number) => (
           <div key={index} className="p-0.5 md:p-0.5">
             <div className={imgTail}>
               <Image
