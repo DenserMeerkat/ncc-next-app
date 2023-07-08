@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import { Info, Target, Goal } from "lucide-react";
-import objectives from "../resources/objectives.ts";
+import objectives from "../../resources/objectives.ts";
 
 const AboutHead = () => {
   return (

@@ -1,4 +1,5 @@
 import React, { createContext, useState, ReactNode } from "react";
+import { usePathname } from "next/navigation";
 
 interface AppState {
   activePage: string;
@@ -12,7 +13,11 @@ interface AppStateProviderProps {
 }
 
 const AppStateProvider: React.FC<AppStateProviderProps> = ({ children }) => {
-  const [activePage, setActivePage] = useState("home");
+  const pathname = usePathname();
+  const currentPage = pathname.split("/")[1];
+  const [activePage, setActivePage] = useState(
+    currentPage === "" ? "home" : currentPage
+  );
 
   const state: AppState = {
     activePage,

@@ -13,7 +13,7 @@ const controlTail = `p-1.5 md:p-2.5 bg-sky-300/[0.9] dark:bg-slate-700/[0.95] te
 hover:bg-sky-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
 
 export const HomeCarousel = () => {
-  const nccWallpaper = "/images/ncc_wallpaper.jpg";
+  const nccWallpaper = "/images/wallpapers/ncc_wallpaper.jpg";
   return (
     <div className="max-w-6xl mx-auto  mt-10 mb-10">
       <div className="p-0 md:p-2  ">

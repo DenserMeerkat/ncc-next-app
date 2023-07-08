@@ -27,7 +27,7 @@ const NavSheet = (props: any) => {
   const [isSmallWindow, setIsSmallWindow] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallWindow(window.innerHeight < 350);
+      setIsSmallWindow(window.innerHeight < 380);
     };
 
     window.addEventListener("resize", handleResize);
@@ -96,6 +96,7 @@ const NavSheet = (props: any) => {
               >
                 Gallery
               </Link>
+              <div></div>
             </div>
           </ScrollArea>
         </SheetDescription>

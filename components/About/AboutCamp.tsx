@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
 import { Tent, Text, List, Hourglass } from "lucide-react";
-import camps from "../resources/camps";
+import camps from "../../resources/camps";
 import { CampButton, CampCard } from "./CampComps";
 
 const AboutCamp = () => {

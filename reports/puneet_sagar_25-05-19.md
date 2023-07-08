@@ -9,6 +9,9 @@ images:
     "/images/reports/psag3.jpg",
   ]
 thumb: "/images/reports/psag2.jpg"
+captions: []
+authors: []
+tags: []
 ---
 
 ---

@@ -8,7 +8,7 @@ import SectionHeading from "../common/SectionHeading";
 
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
-  const nccShoulder = "/images/ncc_shoulder.png";
+  const nccShoulder = "/images/wallpapers/ncc_shoulder.png";
   const nccFlag = "/images/logos/ncc_flag.png";
   const logoBgTail = `rounded-xl bg-sky-50 dark:bg-slate-800 mix-blend-color-darken border-2 border-gray-300 dark:border-slate-700
   transition-colors hover:bg-rose-200 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600`;

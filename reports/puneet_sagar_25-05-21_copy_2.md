@@ -9,6 +9,9 @@ images:
     "/images/reports/psag3.jpg",
   ]
 thumb: "/images/reports/psag1.jpg"
+captions: []
+authors: []
+tags: []
 ---
 
 ## Details of activities carried out:

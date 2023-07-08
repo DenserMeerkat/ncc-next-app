@@ -24,7 +24,6 @@ const CampButton = (props: any) => {
       key={id}
       className={`${buttonTail} ${active ? activeTail : ""}`}
       onClick={() => {
-        console.log(id);
         onClick(id);
       }}
     >

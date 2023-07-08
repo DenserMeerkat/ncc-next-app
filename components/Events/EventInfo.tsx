@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import SectionHeading from "../common/SectionHeading";
 import { SquareGantt } from "lucide-react";
-import eventInfo from "../resources/eventInfo.ts";
+import eventInfo from "../../resources/eventInfo.ts";
 import TooltipElement from "../common/TooltipElement";
 
 const EventInfo = () => {
