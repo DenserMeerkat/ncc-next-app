@@ -1,11 +1,10 @@
 "use client";
-import dynamic from "next/dynamic";
 import TooltipElement from "../common/TooltipElement";
 import { Pause, Play, StepForward, StepBack } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
-
+import { heroLogos, heroCarousel } from "@/resources/hero";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -13,7 +12,6 @@ const controlTail = `p-1.5 md:p-2.5 bg-sky-300/[0.9] dark:bg-slate-700/[0.95] te
 hover:bg-sky-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
 
 export const HomeCarousel = () => {
-  const nccWallpaper = "/images/wallpapers/ncc_wallpaper.jpg";
   return (
     <div className="max-w-6xl mx-auto  mt-10 mb-10">
       <div className="p-0 md:p-2  ">
@@ -37,15 +35,7 @@ export const HomeCarousel = () => {
           </h2>
         </div>
         <div className="md:rounded-md border border-gray-400 dark:border-slate-700">
-          <MultiCarousel
-            images={[
-              nccWallpaper,
-              nccWallpaper,
-              nccWallpaper,
-              nccWallpaper,
-              nccWallpaper,
-            ]}
-          />
+          <MultiCarousel />
         </div>
       </div>
     </div>
@@ -74,7 +64,6 @@ const MultiCarousel = (props: any) => {
       items: 1,
     },
   };
-  const images = props.images;
   const [autoplay, setAutoplay] = useState(true);
 
   const handleAutoplayClick = () => {
@@ -130,14 +119,16 @@ const MultiCarousel = (props: any) => {
         removeArrowOnDeviceType={[]}
         className="max-w-6xl md:rounded-md overflow-hidden mx-auto"
       >
-        {images.map((image: string, index: number) => (
+        {heroCarousel.map((image, index: number) => (
           <div key={index} className="p-0.5 md:p-0.5">
             <div className={imgTail}>
               <Image
-                src={image}
+                src={image.src}
                 width={1980}
-                height={720}
-                alt={image}
+                height={858}
+                blurDataURL={image.src.replace("images", "min_images")}
+                placeholder="blur"
+                alt={image.alt}
                 loading="lazy"
                 quality={100}
               />

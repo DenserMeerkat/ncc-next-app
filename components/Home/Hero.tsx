@@ -5,13 +5,12 @@ import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import TooltipElement from "../common/TooltipElement";
 import SectionHeading from "../common/SectionHeading";
+import { heroLogos, heroCarousel } from "@/resources/hero";
 
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
   const nccShoulder = "/images/wallpapers/ncc_shoulder.png";
   const nccFlag = "/images/logos/ncc_flag.png";
-  const logoBgTail = `rounded-xl bg-sky-50 dark:bg-slate-800 mix-blend-color-darken border-2 border-gray-300 dark:border-slate-700
-  transition-colors hover:bg-rose-200 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600`;
   const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
   return (
     <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip  h-fit">
@@ -84,6 +83,8 @@ const Hero = () => {
             >
               <Image
                 src={nccShoulder}
+                blurDataURL={nccShoulder.replace("images", "min_images")}
+                placeholder="blur"
                 fill
                 alt="Hero Image showing NCC arm badge with Anna University Red building background"
               />
@@ -92,71 +93,23 @@ const Hero = () => {
         )}
       </div>
       <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10 select-text">
-        <div className={`${logoTail} p-4`}>
-          <TooltipElement
-            element={
-              <Image
-                height={100}
-                width={100}
-                src="/images/logos/ncc_icon_png.png"
-                alt="National Cadet Corps Logo"
-              />
-            }
-            tooltip={"National Cadet Corps"}
-          />
-        </div>
-        <div className={`${logoTail} p-3`}>
-          <TooltipElement
-            element={
-              <Image
-                height={80}
-                width={80}
-                src="/images/logos/AU_logo_1.png"
-                alt="Anna University Logo"
-              />
-            }
-            tooltip={"Anna University"}
-          />
-        </div>
-        <div className={`${logoTail} p-2`}>
-          <TooltipElement
-            element={
-              <Image
-                height={100}
-                width={100}
-                src="/images/logos/CEG_col.png"
-                alt="College of Engineering Guindy Logo"
-              />
-            }
-            tooltip={"College of Engineering, Guindy"}
-          />
-        </div>
-        <div className={`${logoTail} p-2`}>
-          <TooltipElement
-            element={
-              <Image
-                height={100}
-                width={100}
-                src="/images/logos/ACT_logo_2.png"
-                alt="Alagappa College of Technology Logo"
-              />
-            }
-            tooltip={"Alagappa College of Technology"}
-          />
-        </div>
-        <div className={logoTail}>
-          <TooltipElement
-            element={
-              <Image
-                height={120}
-                width={120}
-                src="/images/logos/azadi_ka_amrit_2.png"
-                alt="Azadi Ka Amrit Mahotsav Logo"
-              />
-            }
-            tooltip={"Azadi Ka Amrit Mahotsav"}
-          />
-        </div>
+        {heroLogos.map((image) => (
+          <div className={`${logoTail} p-${image.padding}`}>
+            <TooltipElement
+              element={
+                <Image
+                  height={image.height}
+                  width={image.width}
+                  blurDataURL={image.src.replace("images", "min_images")}
+                  placeholder="blur"
+                  src={image.src}
+                  alt={image.alt}
+                />
+              }
+              tooltip={image.tooltip}
+            />
+          </div>
+        ))}
       </div>
       <div className="text-sm sm:text-base max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
         <p>
