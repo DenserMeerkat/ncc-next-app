@@ -42,7 +42,14 @@ const EventCard = (props: any) => {
       <TooltipElement
         element={
           <div className="flex flex-col even:flex-col-reverse items-center w-[250px] shrink-0">
-            <Image src={src} height={200} width={200} alt={alt} />
+            <Image
+              src={src}
+              height={200}
+              // blurDataURL={src.replace("images", "min_images")}
+              // placeholder="blur"
+              width={200}
+              alt={alt}
+            />
           </div>
         }
         tooltip={title}
