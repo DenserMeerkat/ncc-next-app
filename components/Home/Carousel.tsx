@@ -2,7 +2,7 @@
 import TooltipElement from "../common/TooltipElement";
 import { Pause, Play, StepForward, StepBack } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useMediaQuery } from "@mui/material";
 import { heroCarousel } from "@/resources/hero";
 import Carousel from "react-multi-carousel";
@@ -121,7 +121,7 @@ const MultiCarousel = (props: any) => {
                 src={image.src}
                 width={1980}
                 height={858}
-                blurDataURL={image.minSrc}
+                blurDataURL={image.src.replace("images", "min_images")}
                 placeholder="blur"
                 alt={image.alt}
                 quality={100}

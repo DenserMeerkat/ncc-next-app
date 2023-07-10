@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useState } from "react";
 import { Pause, Play, StepForward, StepBack } from "lucide-react";
 import TooltipElement from "../common/TooltipElement";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ReportCarousel = (props: any) => {
   const images = props.images;
@@ -42,13 +42,13 @@ const ReportCarousel = (props: any) => {
                 <Image
                   key={index}
                   src={image}
-                  fill
+                  layout="fill"
                   alt={`Thumbnail ${index + 1}`}
                   className="h-14 sm:h-16 rounded-sm object-cover border"
                   onClick={() => {
                     setActive(index);
                   }}
-                  quality={60}
+                  quality={10}
                 />
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SectionHeading from "../common/SectionHeading";
 import { SquareGantt } from "lucide-react";
 import eventInfo from "../../resources/eventInfo.ts";
@@ -7,7 +7,7 @@ import TooltipElement from "../common/TooltipElement";
 
 const EventInfo = () => {
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 relative h-fit">
+    <div className="bg-slate-100 dark:bg-slate-900/[0.6] relative h-fit">
       <div className="max-w-5xl mx-auto py-12 flex flex-col gap-y-12">
         <SectionHeading icon={SquareGantt} title={"Standout Events"} />
         {eventInfo.map((event) => (
@@ -45,9 +45,9 @@ const EventCard = (props: any) => {
             <Image
               src={src}
               height={200}
-              // blurDataURL={src.replace("images", "min_images")}
-              // placeholder="blur"
               width={200}
+              blurDataURL={src.replace("images", "min_images")}
+              placeholder="blur"
               alt={alt}
             />
           </div>

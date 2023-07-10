@@ -5,7 +5,7 @@ import objectives from "../../resources/objectives.ts";
 
 const AboutHead = () => {
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 relative h-max py-12">
+    <div className="bg-slate-100 dark:bg-slate-900/[0.7] relative h-max py-12">
       <div className=" max-w-6xl mx-auto">
         <SectionHeading className="mb-6" icon={Info} title="About NCC" />
         <div>

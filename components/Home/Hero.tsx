@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import TooltipElement from "../common/TooltipElement";
@@ -10,18 +10,24 @@ import { heroLogos } from "@/resources/hero";
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
   const nccShoulder = "/images/wallpapers/ncc_shoulder.png";
-  const minNccShoulder = "/min_images/wallpapers/ncc_shoulder.png";
   const nccFlag = "/images/logos/ncc_flag.png";
   const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 relative overflow-clip  h-fit">
+    <div className="bg-slate-100 dark:bg-slate-900/[0.8] relative overflow-clip  h-fit">
       <div className="relative max-w-7xl  mx-auto grid grid-cols-12  h-fit">
         <div className="pt-12 max-[900px]:col-span-12 max-[1200px]:col-span-7 max-[10000px]:col-span-6 px-2 flex flex-col max-[900px]:items-center">
           <SectionHeading
             className="mb-2"
             customIcon={
               <div className=" flex items-center ">
-                <Image width={20} height={20} src={nccFlag} alt="NCC Flag" />
+                <Image
+                  width={20}
+                  height={15}
+                  src={nccFlag}
+                  blurDataURL={nccFlag.replace("images", "min_images")}
+                  placeholder="blur"
+                  alt="NCC Flag"
+                />
               </div>
             }
             title={"National Cadet Corps"}
@@ -84,9 +90,9 @@ const Hero = () => {
             >
               <Image
                 src={nccShoulder}
-                blurDataURL={minNccShoulder}
+                blurDataURL={nccShoulder.replace("images", "min_images")}
                 placeholder="blur"
-                fill
+                layout="fill"
                 alt="Hero Image showing NCC arm badge with Anna University Red building background"
               />
             </div>
@@ -101,7 +107,7 @@ const Hero = () => {
                 <Image
                   height={image.height}
                   width={image.width}
-                  blurDataURL={image.minSrc}
+                  blurDataURL={image.src.replace("images", "min_images")}
                   placeholder="blur"
                   src={image.src}
                   alt={image.alt}

@@ -7,10 +7,13 @@ import { Menu } from "lucide-react";
 import { buttonCSS } from "../common/tailwindCSS";
 import { useState, useEffect, useContext } from "react";
 import NavSheet from "./NavSheet";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { AppStateContext } from "../utils/AppStateContext";
 
 const AppBar = (props: any) => {
+  // ImageURL
+  const nccLogo = "/images/logos/ncc_logo.png";
+
   // Hooks
   const [openDrawer, setOpenDrawer] = useState(false);
   const pageTitleToggle = useMediaQuery("(min-width: 900px)");
@@ -53,8 +56,10 @@ const AppBar = (props: any) => {
           <div className="h-7 mr-4">
             <Image
               width={18}
-              height={30}
-              src="/images/logos/ncc_logo.png"
+              height={27}
+              src={nccLogo}
+              blurDataURL={nccLogo.replace("images", "min_images")}
+              placeholder="blur"
               alt="NCC logo"
             />
           </div>

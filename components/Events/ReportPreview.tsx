@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import prettyDate from "../utils/prettyDate";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ReportPreview = (props: any) => {
   const title = props.title;
@@ -20,8 +20,8 @@ const ReportPreview = (props: any) => {
     hover:scale-[101%] bg-sky-100 dark:bg-slate-900/[0.8]
     hover:bg-sky-200 dark:hover:bg-slate-800 select-none overflow-hidden flex flex-col"
     >
-      <div className="relative flex rounded-t-sm object-contain w-64 h-44">
-        <Image src={thumb} fill alt="Broken Image" />
+      <div className="relative flex rounded-t-sm object-contain h-40 w-64 sm:h-44">
+        <Image src={thumb} layout="fill" alt="Broken Image" />
       </div>
       <CardHeader className="p-3 pt-4 border-b">
         <CardTitle>

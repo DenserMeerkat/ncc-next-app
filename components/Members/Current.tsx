@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import { Sparkle } from "lucide-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Quote from "@/components/common/Quote";
 import { anos } from "@/resources/anos";
 
@@ -41,21 +41,21 @@ const Current = () => {
 export default Current;
 
 const AnoCard = (props: any) => {
-  const { id, name, src, alt, plat, minSrc, desig, dept } = props;
+  const { id, name, src, alt, plat, desig, dept } = props;
   return (
     <div
       key={id}
-      className="w-full min-[350px]:w-[350px] h-48  relative min-[350px]:rounded-md overflow-clip flex flex-row
+      className="w-full min-[350px]:w-[350px] h-48 relative min-[350px]:rounded-md overflow-clip flex flex-row
         bg-sky-100/[0.5] dark:bg-slate-900 border border-gray-300 dark:border-slate-800
-        drop-shadow-md transition select-none  font-medium"
+        drop-shadow-md transition select-text font-medium"
     >
       <Image
-        className="border-r border-gray-300 dark:border-slate-700 "
-        width={150}
+        className="border-r border-gray-300 dark:border-slate-700 select-none"
+        width={250}
         height={187.5}
         src={src}
         alt={alt}
-        blurDataURL={minSrc}
+        blurDataURL={src.replace("images", "min_images")}
         placeholder="blur"
       />
       <div className="py-4 w-full flex flex-col items-center justify-between">
