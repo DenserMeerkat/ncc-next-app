@@ -10,6 +10,7 @@ import { heroLogos } from "@/resources/hero";
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
   const nccShoulder = "/images/wallpapers/ncc_shoulder.png";
+  const minNccShoulder = "/min_images/wallpapers/ncc_shoulder.png";
   const nccFlag = "/images/logos/ncc_flag.png";
   const logoTail = `relative flex items-center justify-center min-w-[80px] h-auto max-w-[100px] w-[15%] aspect-[1/1] object-contain drop-shadow-sm`;
   return (
@@ -75,48 +76,41 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        {isNonMobile &&
-          (console.log(nccShoulder.replace("images", "min_images")),
-          (
-            <div className="max-[900px]:col-span-0 max-[1200px]:col-span-5 max-[10000px]:col-span-7 sm:col-span-5">
-              <div
-                className="relative md:w-[700px] md:h-[500px] xl:w-[760px] xl:h-[530px] 2xl:w-[760px] 2xl:h-[530px] 
+        {isNonMobile && (
+          <div className="max-[900px]:col-span-0 max-[1200px]:col-span-5 max-[10000px]:col-span-7 sm:col-span-5">
+            <div
+              className="relative md:w-[700px] md:h-[500px] xl:w-[760px] xl:h-[530px] 2xl:w-[760px] 2xl:h-[530px] 
             rounded-bl-3xl overflow-clip drop-shadow-md border-b-2 border-r-2 border-l-2 border-transparent dark:border-slate-700"
-              >
-                <Image
-                  src={nccShoulder}
-                  blurDataURL={nccShoulder.replace("images", "min_images")}
-                  placeholder="blur"
-                  fill
-                  alt="Hero Image showing NCC arm badge with Anna University Red building background"
-                />
-              </div>
+            >
+              <Image
+                src={nccShoulder}
+                blurDataURL={minNccShoulder}
+                placeholder="blur"
+                fill
+                alt="Hero Image showing NCC arm badge with Anna University Red building background"
+              />
             </div>
-          ))}
+          </div>
+        )}
       </div>
       <div className="px-8 md:px-0 flex flex-wrap mx-auto gap-12 md:gap-12 gap-y-4 lg:gap-24 justify-center pt-20 pb-10 select-text">
-        {heroLogos.map(
-          (image: any, index: number) => (
-            console.log(image.src.replace("images", "min_images")),
-            (
-              <div key={index} className={`${logoTail} p-${image.padding}`}>
-                <TooltipElement
-                  element={
-                    <Image
-                      height={image.height}
-                      width={image.width}
-                      blurDataURL={image.src.replace("images", "min_images")}
-                      placeholder="blur"
-                      src={image.src}
-                      alt={image.alt}
-                    />
-                  }
-                  tooltip={image.tooltip}
+        {heroLogos.map((image: any, index: number) => (
+          <div key={index} className={`${logoTail} p-${image.padding}`}>
+            <TooltipElement
+              element={
+                <Image
+                  height={image.height}
+                  width={image.width}
+                  blurDataURL={image.minSrc}
+                  placeholder="blur"
+                  src={image.src}
+                  alt={image.alt}
                 />
-              </div>
-            )
-          )
-        )}
+              }
+              tooltip={image.tooltip}
+            />
+          </div>
+        ))}
       </div>
       <div className="text-sm sm:text-base max-w-2xl mx-auto text-center pb-12 text-gray-500 dark:text-slate-400">
         <p>

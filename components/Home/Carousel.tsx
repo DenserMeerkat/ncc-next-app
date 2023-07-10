@@ -114,26 +114,21 @@ const MultiCarousel = (props: any) => {
         removeArrowOnDeviceType={[]}
         className="max-w-6xl md:rounded-md overflow-hidden mx-auto"
       >
-        {heroCarousel.map(
-          (image: any, index: number) => (
-            console.log(image.src.replace("images", "min_images")),
-            (
-              <div key={index} className="p-0.5 md:p-0.5">
-                <div className={imgTail}>
-                  <Image
-                    src={image.src}
-                    width={1980}
-                    height={858}
-                    blurDataURL={image.src.replace("images", "min_images")}
-                    placeholder="blur"
-                    alt={image.alt}
-                    quality={100}
-                  />
-                </div>
-              </div>
-            )
-          )
-        )}
+        {heroCarousel.map((image: any, index: number) => (
+          <div key={index} className="p-0.5 md:p-0.5">
+            <div className={imgTail}>
+              <Image
+                src={image.src}
+                width={1980}
+                height={858}
+                blurDataURL={image.minSrc}
+                placeholder="blur"
+                alt={image.alt}
+                quality={100}
+              />
+            </div>
+          </div>
+        ))}
       </Carousel>
     </div>
   );
