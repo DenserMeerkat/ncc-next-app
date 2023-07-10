@@ -14,7 +14,7 @@ const SectionHeading = (props: any) => {
       <div className=" mr-2 flex items-center ">
         {customIcon ? customIcon : <IconComponent className={iconTail} />}
       </div>
-      <p className="text-sm tracking-wide font-bold">{title}</p>
+      <h2 className="text-sm tracking-wide font-bold">{title}</h2>
     </div>
   );
 };

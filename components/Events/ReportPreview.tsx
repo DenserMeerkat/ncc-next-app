@@ -18,7 +18,7 @@ const ReportPreview = (props: any) => {
       className="border border-gray-300 dark:border-slate-700 rounded-md 
     transition  drop-shadow-sm hover:drop-shadow-2xl min-w-[200px] max-w-[330.73px]
     hover:scale-[101%] bg-sky-100 dark:bg-slate-900/[0.8]
-    hover:bg-rose-50 dark:hover:bg-slate-800 select-none overflow-hidden flex flex-col"
+    hover:bg-sky-200 dark:hover:bg-slate-800 select-none overflow-hidden flex flex-col"
     >
       <div className="relative flex rounded-t-sm object-contain w-64 h-44">
         <Image src={thumb} fill alt="Broken Image" />
