@@ -39,8 +39,8 @@ export const HomeCarousel = () => {
 
 const MultiCarousel = (props: any) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const imgTail =
-    "relative md:rounded-sm overflow-hidden object-cover select-none pointer-events-none";
+  const imgTail = `relative w-full h-[43vw] min-[1150px]:h-[494px]
+    md:rounded-sm overflow-hidden select-none pointer-events-none`;
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 2400 },
@@ -71,8 +71,7 @@ const MultiCarousel = (props: any) => {
         <div
           aria-label="Carousel Controls"
           className=" absolute z-10 rounded-sm 
-        -bottom-8 left-1/2 transform -translate-x-1/2 md:top-2.5 md:bottom-auto md:left-auto md:right-2.5 md:translate-x-0
-  "
+        -bottom-8 left-1/2 transform -translate-x-1/2 md:top-2.5 md:bottom-auto md:left-auto md:right-2.5 md:translate-x-0"
         >
           {autoplay ? (
             <TooltipElement
@@ -112,15 +111,14 @@ const MultiCarousel = (props: any) => {
         customLeftArrow={<CustomArrow direction="left" />}
         customRightArrow={<CustomArrow direction="right" />}
         removeArrowOnDeviceType={[]}
-        className="max-w-6xl md:rounded-md overflow-hidden mx-auto"
+        className="max-w-6xl md:rounded-md overflow-hidden"
       >
         {heroCarousel.map((image: any, index: number) => (
-          <div key={index} className="p-0.5 md:p-0.5">
+          <div key={index} className="p-0.5 ">
             <div className={imgTail}>
               <Image
                 src={image.src}
-                width={1980}
-                height={858}
+                layout="fill"
                 blurDataURL={image.src.replace("images", "min_images")}
                 placeholder="blur"
                 alt={image.alt}
