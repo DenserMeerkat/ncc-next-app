@@ -65,17 +65,21 @@ const AnoCard = (props: any) => {
               {plat}
             </p>
           </div>
-          <div>
+          <div className="">
             <h3 className="text-sm max-w-[180px] text-center font-bold">
               {name}
             </h3>
           </div>
         </div>
-        <div className="text-[0.68rem]">
-          <p className="dark:text-slate-300  font-bold dark:font-medium">
+        <div className="text-[0.68rem] self-start lg:self-auto text-left max-[330px]:pl-2 max-[400px]:pl-4 max-[1100px]:pl-6">
+          <p className="dark:text-slate-300 font-bold dark:font-medium">
             {desig}
           </p>
-          <p className="dark:text-slate-400 max-[340px]:text-[0.65rem]">
+          <p
+            className={`dark:text-slate-400 max-[340px]:text-[0.65rem] ${
+              id === 0 ? "text-[0.62rem]" : ""
+            }`}
+          >
             {dept}
           </p>
           <p className="dark:text-slate-400 text-[0.6rem]">Anna University</p>

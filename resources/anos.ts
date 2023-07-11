@@ -7,7 +7,7 @@ export const anos = [
     src: "/images/anos/Engr_ANO_1.jpg",
     alt: "Capt. Dr. A Sursh Babu",
     desig: "Head of the Department",
-    dept: "Dept. Manufacturing Engineering",
+    dept: "Dept. of Manufacturing Engineering",
   },
   {
     id: 1,
