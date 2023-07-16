@@ -17,7 +17,7 @@ const ButtonGroup = (props: any) => {
 
   // Tailwind CSS
   const dividerTail = `min-h-[1em] w-px self-stretch  bg-rose-300 dark:bg-slate-700 select-none`;
-  const commonTail = ` py-1 px-4 lg:px-5 text-md  select-none transition`;
+  const commonTail = ` py-1 px-4 lg:px-5 text-md  select-none  transition-colors`;
   const buttonTail = `bg-slate-50 dark:bg-slate-950 font-semibold dark:hover:bg-slate-900 hover:bg-rose-200 ${commonTail}`;
   const activeTail = `bg-red-300 dark:bg-slate-700 font-bold ${commonTail}`;
 

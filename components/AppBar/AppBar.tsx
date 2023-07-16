@@ -48,7 +48,7 @@ const AppBar = (props: any) => {
         <Link
           href={"/"}
           className="flex dark:hover:bg-slate-900 hover:bg-rose-200 py-1.5 px-3 rounded-md items-center cursor-pointer
-          border border-transparent  hover:border-rose-300 dark:hover:border-slate-700"
+          border border-transparent  hover:border-rose-300 dark:hover:border-slate-700 transition-colors"
           onClick={() => {
             handleNavItemClick("home");
           }}
