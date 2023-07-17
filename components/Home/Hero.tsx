@@ -25,7 +25,6 @@ const Hero = () => {
                   height={15}
                   src={nccFlag}
                   blurDataURL={nccFlag.replace("images", "min_images")}
-                  placeholder="blur"
                   alt="NCC Flag"
                 />
               </div>

@@ -11,6 +11,7 @@ const ReportContent = (props: any) => {
   const formattedDate = prettyDate(date);
   const content = props.content;
   const images = props.images;
+  const backURL = props.backURL || "/events";
 
   return (
     <div className="flex flex-col-reverse sm:flex-col xl:flex-row py-8 justify-center items-center xl:items-start gap-12">
@@ -22,7 +23,7 @@ const ReportContent = (props: any) => {
         <div className="w-full flex justify-center md:justify-end items-center">
           <button className="mb-6">
             <Link
-              href="/events"
+              href={backURL}
               className="w-max flex px-1 sm:px-3 items-center rounded-md font-medium
       bg-rose-200 dark:bg-slate-800 border border-rose-300 dark:border-slate-700  transition-colors
       hover:bg-rose-300 dark:hover:bg-slate-700 hover:border-rose-400 dark:hover:border-slate-600"

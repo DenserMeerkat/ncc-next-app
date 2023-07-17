@@ -59,7 +59,6 @@ const AppBar = (props: any) => {
               height={27}
               src={nccLogo}
               blurDataURL={nccLogo.replace("images", "min_images")}
-              placeholder="blur"
               alt="NCC logo"
             />
           </div>
