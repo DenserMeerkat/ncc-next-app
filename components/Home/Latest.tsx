@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import { MdOutlineNewReleases } from "react-icons/md";
-import { LatestReports } from "./LatestReports1";
+import { LatestReports } from "./LatestReports";
 import { getLatestReportMetadata } from "../utils/getReportMetadata";
 import ReportPreview from "../Events/ReportPreview";
 
@@ -21,7 +21,7 @@ const Latest = () => {
           icon={MdOutlineNewReleases}
           title={"What's New"}
         />
-        <div className="px-2 sm:px-3 md:px-6">
+        <div className="px-1 sm:px-2 md:px-4">
           <LatestReports years={years} />
         </div>
       </div>

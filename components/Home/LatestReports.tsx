@@ -1,64 +1,131 @@
 "use client";
-import Carousel from "react-multi-carousel";
+import React, { useState, useRef, forwardRef, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import TooltipElement from "../common/TooltipElement";
+import { StepBack, StepForward } from "lucide-react";
+import { controlTail } from "../common/tailwindCSS";
 
-const responsive = {
-  largeScreen: {
-    breakpoint: { max: 3000, min: 1980 },
-    items: 5,
-    slidesToSlide: 3,
-    partialVisibilityGutter: 20,
-  },
-  desktop: {
-    breakpoint: { max: 1980, min: 1024 },
-    items: 4,
-    slidesToSlide: 2,
-    partialVisibilityGutter: 20,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 600 },
-    items: 3,
-    slidesToSlide: 2,
-    partialVisibilityGutter: 10,
-  },
-  mobile: {
-    breakpoint: { max: 600, min: 0 },
-    items: 2,
-    slidesToSlide: 2,
-    partialVisibilityGutter: 10,
-  },
-};
-
-const LatestReports = (props: any) => {
+export const LatestReports = (props: any) => {
+  const [isDomLoaded, setIsDomLoaded] = useState(false);
+  useEffect(() => {
+    setIsDomLoaded(true);
+  }, [isDomLoaded]);
+  const [index, setIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(0);
+  const carouselRef = useRef<Slider>(null);
   const years = props.years;
+  const handlePrevious = () => {
+    carouselRef.current?.slickPrev();
+  };
+  const handleNext = () => {
+    carouselRef.current?.slickNext();
+  };
+  const beforeChange = (prev: number, next: number) => {
+    setNextIndex(next);
+  };
+  const afterChange = (index: number) => {
+    setIndex(index);
+  };
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    beforeChange: beforeChange,
+    afterChange: afterChange,
+    variableWidth: true,
+    arrows: false,
+    edgeFriction: 1,
+    swipe: index !== years.length - 1,
+    responsive: [
+      {
+        breakpoint: 4000,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
+      },
+      {
+        breakpoint: 1368,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  if (!isDomLoaded) return <div></div>;
   return (
-    <div className="max-w-6xl mx-auto">
-      <Carousel
-        className="z-0 px-6 py-3"
-        ssr={true}
-        swipeable={true}
-        draggable={true}
-        showDots={false}
-        responsive={responsive}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        transitionDuration={500}
-        customTransition="transform 500ms ease-in-out"
-        infinite={false}
-        partialVisible={true}
-      >
+    <div className="relative px-6">
+      <Slider ref={carouselRef} {...settings} className="flex">
         {years.map((item: React.ReactElement<any>, index: number) => (
           <CarouselItem key={index}>{item}</CarouselItem>
         ))}
-      </Carousel>
+      </Slider>
+      <div aria-label="carousel-controls">
+        {index !== 0 && (
+          <CustomArrow direction="left" onClick={handlePrevious} />
+        )}
+        {index !== years.length - 1 && (
+          <CustomArrow direction="right" onClick={handleNext} />
+        )}
+      </div>
     </div>
   );
 };
 
-export default LatestReports;
-
 const CarouselItem = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="w-fit border bg-zinc-100 dark:bg-slate-900 rounded-sm md:rounded-md mr-2 ">
+    <div className="w-fit border bg-zinc-100 dark:bg-slate-900 rounded-sm md:rounded-md m-1 ">
       {children}
     </div>
   );
 };
+
+const CustomArrow = forwardRef(({ onClick, direction }: any, ref) => {
+  const buttonTail = `absolute z-10 rounded-md  ${
+    direction === "left" ? "left-0 sm:-left-2" : "right-0 sm:-right-2"
+  } h-fit w-fit 
+  top-1/2 transform -translate-y-1/2
+  ${controlTail}`;
+  return (
+    <div>
+      {direction === "left" ? (
+        <TooltipElement
+          element={
+            <button onClick={onClick} className={buttonTail}>
+              <StepBack />
+            </button>
+          }
+          tooltip={"Previous"}
+        />
+      ) : (
+        <TooltipElement
+          element={
+            <button onClick={onClick} className={buttonTail}>
+              <StepForward />
+            </button>
+          }
+          tooltip={"Next"}
+        />
+      )}
+    </div>
+  );
+});
