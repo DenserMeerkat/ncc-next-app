@@ -45,7 +45,6 @@ const NavSheet = (props: any) => {
   }
   const { activePage, setActivePage } = state;
   const handleNavItemClick = (page: string) => {
-    setActivePage(page);
     onOpenChange(false);
   };
 

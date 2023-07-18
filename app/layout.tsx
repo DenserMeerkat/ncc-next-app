@@ -1,4 +1,5 @@
 import "./globals.css";
+import "react-multi-carousel/lib/styles.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import RootComponent from "./Wrappers.tsx";
 

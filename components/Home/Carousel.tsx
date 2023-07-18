@@ -6,7 +6,6 @@ import Image from "next/legacy/image";
 import { useMediaQuery } from "@mui/material";
 import { heroCarousel } from "@/resources/hero";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import Quote from "../common/Quote";
 
 const controlTail = `p-1.5 md:p-2.5 bg-sky-300/[0.9] dark:bg-slate-700/[0.95] text-gray-800 dark:text-slate-300 rounded-md
@@ -14,7 +13,7 @@ hover:bg-sky-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border
 
 export const HomeCarousel = () => {
   return (
-    <div className="max-w-6xl mx-auto  mt-10 mb-10">
+    <div className="max-w-6xl mx-auto  mt-8">
       <div className="p-0 md:p-2">
         <Quote>
           <span className="text-red-900 dark:text-red-400 font-bold">
@@ -108,8 +107,8 @@ const MultiCarousel = (props: any) => {
         autoPlay={!isMobile ? autoplay : false}
         ssr
         infinite
-        customLeftArrow={<CustomArrow direction="left" />}
-        customRightArrow={<CustomArrow direction="right" />}
+        // customLeftArrow={<CustomArrow direction="left" />}
+        // customRightArrow={<CustomArrow direction="right" />}
         removeArrowOnDeviceType={[]}
         className="max-w-6xl md:rounded-md overflow-hidden"
       >

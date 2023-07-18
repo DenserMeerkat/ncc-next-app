@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import React from "react";
+import { useContext } from "react";
 import prettyDate from "../utils/prettyDate";
 import Image from "next/legacy/image";
 
@@ -11,17 +12,19 @@ const ReportPreview = (props: any) => {
   const date = props.date;
   const slug = props.slug;
   const formattedDate = prettyDate(date);
+  const backPage = props.backPage;
+
   return (
     <Link
       key={slug + title}
-      href={`/events/${slug}`}
+      href={{ pathname: `/events/${slug}`, query: { backPage: backPage } }}
       className="border border-gray-300 dark:border-slate-700 rounded-md 
-    transition  drop-shadow-sm hover:drop-shadow-2xl min-w-[200px] max-w-[330.73px]
+    transition  drop-shadow-sm hover:drop-shadow-lg min-w-[200px] max-w-[330.73px]
     hover:scale-[101%] bg-sky-100 dark:bg-slate-900/[0.8]
     hover:bg-sky-200 dark:hover:bg-slate-800 select-none overflow-hidden flex flex-col"
     >
       <div className="relative flex rounded-t-sm object-contain h-40 w-64 sm:h-44">
-        <Image src={thumb} layout="fill" alt="Broken Image" />
+        <Image src={thumb} layout="fill" alt={title} />
       </div>
       <CardHeader className="p-3 pt-4 border-b">
         <CardTitle>
