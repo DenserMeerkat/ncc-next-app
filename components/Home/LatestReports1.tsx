@@ -1,36 +1,63 @@
 "use client";
-import React from "react";
-import Slider, { CustomArrowProps } from "react-slick";
-
+import React, { useState, useRef, forwardRef, use, useEffect } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import TooltipElement from "../common/TooltipElement";
+import { StepBack, StepForward } from "lucide-react";
+import { controlTail } from "../common/tailwindCSS";
 
 export const LatestReports = (props: any) => {
+  const [isDomLoaded, setIsDomLoaded] = useState(false);
+  useEffect(() => {
+    setIsDomLoaded(true);
+  }, [isDomLoaded]);
+  const [index, setIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState(0);
+  const carouselRef = useRef<Slider>(null);
   const years = props.years;
+  const handlePrevious = () => {
+    carouselRef.current?.slickPrev();
+  };
+  const handleNext = () => {
+    carouselRef.current?.slickNext();
+  };
+  const beforeChange = (prev: number, next: number) => {
+    setNextIndex(next);
+  };
+  const afterChange = (index: number) => {
+    setIndex(index);
+  };
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
+    beforeChange: beforeChange,
+    afterChange: afterChange,
     variableWidth: true,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
+    arrows: false,
+    edgeFriction: 1,
+    swipe: index !== years.length - 1,
   };
-
+  if (!isDomLoaded) return <div></div>;
   return (
-    <Slider {...settings} className="">
-      <div className="h-72 w-80 px-6">
-        <div className="bg-slate-900  rounded-md h-3/5 flex items-center justify-center">
-          <h2 className="text-2xl font-medium tracking-wider w-36 text-center">
-            Latest <br /> Reports
-          </h2>
-        </div>
+    <div className="relative px-6">
+      <Slider ref={carouselRef} {...settings} className="flex">
+        {years.map((item: React.ReactElement<any>, index: number) => (
+          <CarouselItem key={index}>{item}</CarouselItem>
+        ))}
+      </Slider>
+      <div aria-label="carousel-controls">
+        {index !== 0 && (
+          <CustomArrow direction="left" onClick={handlePrevious} />
+        )}
+        {index !== years.length - 1 && (
+          <CustomArrow direction="right" onClick={handleNext} />
+        )}
       </div>
-      {years.map((item: React.ReactElement<any>, index: number) => (
-        <CarouselItem key={index}>{item}</CarouselItem>
-      ))}
-    </Slider>
+    </div>
   );
 };
 
@@ -42,30 +69,33 @@ const CarouselItem = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-function CustomPrevArrow({ onClick, className, style }: CustomArrowProps) {
+const CustomArrow = forwardRef(({ onClick, direction }: any, ref) => {
+  const buttonTail = `absolute z-10 rounded-md  ${
+    direction === "left" ? "left-0 sm:-left-2" : "right-0 sm:-right-2"
+  } h-fit w-fit 
+  top-1/2 transform -translate-y-1/2
+  ${controlTail}`;
   return (
-    <button
-      className={`${className} ${
-        style && style.display === "none" ? "hidden" : ""
-      } bg-blue-900`}
-      onClick={onClick}
-      disabled={style && style.display === "none"}
-    >
-      Prev
-    </button>
+    <div>
+      {direction === "left" ? (
+        <TooltipElement
+          element={
+            <button onClick={onClick} className={buttonTail}>
+              <StepBack />
+            </button>
+          }
+          tooltip={"Previous"}
+        />
+      ) : (
+        <TooltipElement
+          element={
+            <button onClick={onClick} className={buttonTail}>
+              <StepForward />
+            </button>
+          }
+          tooltip={"Next"}
+        />
+      )}
+    </div>
   );
-}
-
-function CustomNextArrow({ onClick, className, style }: CustomArrowProps) {
-  return (
-    <button
-      className={`${className} ${
-        style && style.display === "none" ? "hidden" : ""
-      }`}
-      onClick={onClick}
-      disabled={style && style.display === "none"}
-    >
-      Next
-    </button>
-  );
-}
+});

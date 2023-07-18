@@ -1,15 +1,14 @@
 "use client";
-import TooltipElement from "../common/TooltipElement";
+import TooltipElement from "@/components/common/TooltipElement";
 import { Pause, Play, StepForward, StepBack } from "lucide-react";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import Image from "next/legacy/image";
 import { useMediaQuery } from "@mui/material";
 import { heroCarousel } from "@/resources/hero";
 import Carousel from "react-multi-carousel";
-import Quote from "../common/Quote";
-
-const controlTail = `p-1.5 md:p-2.5 bg-sky-300/[0.9] dark:bg-slate-700/[0.95] text-gray-800 dark:text-slate-300 rounded-md
-hover:bg-sky-200 dark:hover:bg-slate-600 transition-colors drop-shadow-lg border border-gray-500 dark:border-slate-400`;
+import Quote from "@/components/common/Quote";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { controlTail } from "../common/tailwindCSS";
 
 export const HomeCarousel = () => {
   return (
@@ -38,8 +37,7 @@ export const HomeCarousel = () => {
 
 const MultiCarousel = (props: any) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const imgTail = `relative w-full h-[43vw] min-[1150px]:h-[494px]
-    md:rounded-sm overflow-hidden select-none pointer-events-none`;
+  const imgTail = `relative md:rounded-sm overflow-hidden select-none pointer-events-none`;
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 2400 },
@@ -107,14 +105,14 @@ const MultiCarousel = (props: any) => {
         autoPlay={!isMobile ? autoplay : false}
         ssr
         infinite
-        // customLeftArrow={<CustomArrow direction="left" />}
-        // customRightArrow={<CustomArrow direction="right" />}
+        customLeftArrow={<CustomArrow direction="left" />}
+        customRightArrow={<CustomArrow direction="right" />}
         removeArrowOnDeviceType={[]}
         className="max-w-6xl md:rounded-md overflow-hidden"
       >
         {heroCarousel.map((image: any, index: number) => (
           <div key={index} className="p-0.5 ">
-            <div className={imgTail}>
+            <AspectRatio ratio={30 / 13} className={imgTail}>
               <Image
                 src={image.src}
                 layout="fill"
@@ -123,7 +121,7 @@ const MultiCarousel = (props: any) => {
                 alt={image.alt}
                 quality={100}
               />
-            </div>
+            </AspectRatio>
           </div>
         ))}
       </Carousel>
@@ -131,7 +129,7 @@ const MultiCarousel = (props: any) => {
   );
 };
 
-const CustomArrow = ({ onClick, direction, ...rest }: any) => {
+const CustomArrow = forwardRef(({ onClick, direction, ...rest }: any, ref) => {
   const buttonTail = `absolute z-10 rounded-md  ${
     direction === "left" ? "left-2.5" : "right-2.5"
   } h-fit w-fit 
@@ -160,6 +158,6 @@ const CustomArrow = ({ onClick, direction, ...rest }: any) => {
       )}
     </div>
   );
-};
+});
 
 export default HomeCarousel;

@@ -1,9 +1,14 @@
+"use client";
 import Link from "next/link";
-import { useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import React from "react";
 import { AppStateContext } from "../utils/AppStateContext";
 
 const ButtonGroup = (props: any) => {
+  const [isDomLoaded, setIsDomLoaded] = useState(false);
+  useEffect(() => {
+    setIsDomLoaded(true);
+  }, [isDomLoaded]);
   // Context
   const state = useContext(AppStateContext);
   if (!state) {
@@ -18,6 +23,7 @@ const ButtonGroup = (props: any) => {
   const activeTail = `bg-red-300 dark:bg-slate-700 font-bold ${commonTail}`;
 
   // Render
+  if (!isDomLoaded) return <nav></nav>;
   return (
     <nav className="flex items-center rounded-md border border-rose-300 dark:border-slate-700 overflow-hidden">
       <Link
