@@ -10,7 +10,9 @@ import Quote from "@/components/common/Quote";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { controlTail } from "../common/tailwindCSS";
 
-export const HomeCarousel = () => {
+/* eslint-disable react/display-name */
+HomeCarousel.displayName = "HomeCarousel";
+export default function HomeCarousel() {
   return (
     <div className="max-w-6xl mx-auto  mt-8">
       <div className="p-0 md:p-2">
@@ -33,7 +35,7 @@ export const HomeCarousel = () => {
       </div>
     </div>
   );
-};
+}
 
 const MultiCarousel = (props: any) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -159,5 +161,3 @@ const CustomArrow = forwardRef(({ onClick, direction, ...rest }: any, ref) => {
     </div>
   );
 });
-
-export default HomeCarousel;

@@ -1,4 +1,4 @@
-import HomeCarousel from "@/components/Home/Carousel";
+import HomeCarousel from "@/components/Home/HomeCarousel";
 import Hero from "@/components/Home/Hero";
 import Latest from "@/components/Home/Latest";
 import RouteChange from "@/components/common/RouteChange";

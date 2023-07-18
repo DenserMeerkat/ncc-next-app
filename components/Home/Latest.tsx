@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import { MdOutlineNewReleases } from "react-icons/md";
-import { LatestReports } from "./LatestReports";
+import LatestReports from "./LatestReports";
 import { getLatestReportMetadata } from "../utils/getReportMetadata";
 import ReportPreview from "../Events/ReportPreview";
 

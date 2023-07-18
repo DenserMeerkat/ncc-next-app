@@ -7,7 +7,9 @@ import TooltipElement from "../common/TooltipElement";
 import { StepBack, StepForward } from "lucide-react";
 import { controlTail } from "../common/tailwindCSS";
 
-export const LatestReports = (props: any) => {
+/* eslint-disable react/display-name */
+LatestReports.displayName = "LatestReports";
+export default function LatestReports(props: any) {
   const [isDomLoaded, setIsDomLoaded] = useState(false);
   useEffect(() => {
     setIsDomLoaded(true);
@@ -89,7 +91,7 @@ export const LatestReports = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 const CarouselItem = ({ children }: { children: React.ReactNode }) => {
   return (
