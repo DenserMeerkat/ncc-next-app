@@ -8,7 +8,7 @@ import SectionHeading from "../common/SectionHeading";
 export const EventTabs = (props: any) => {
   const years: Record<string, React.ReactElement<any>[]> = props.years;
   const contentTail =
-    "mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center m-0";
+    "mx-auto grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4 justify-center m-0";
   const currentYear: string = new Date().getFullYear().toString();
   return (
     <div className="px-2 md:px-0 my-10 mx-auto max-w-5xl">
@@ -20,7 +20,7 @@ export const EventTabs = (props: any) => {
 
       <Tabs
         defaultValue={currentYear}
-        className="flex flex-col items-center sm:items-start sm:flex-row gap-10 px-8"
+        className="flex flex-col items-center sm:items-start sm:flex-row gap-4 lg:gap-10 px-2 sm:px-4"
       >
         <TabsList
           aria-label="tabs example"

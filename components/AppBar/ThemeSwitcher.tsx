@@ -8,15 +8,18 @@ import { buttonCSS } from "../common/tailwindCSS";
 
 const ThemeSwitcher = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const tailClass = `${buttonCSS}
-  transition ease-in-out hover:scale-105`;
+  const tailClass = `${buttonCSS} transition ease-in-out hover:scale-105`;
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   const renderThemeChanger = () => {
     if (!mounted)
       return (
         <TooltipElement
-          element={<RotateCw className={tailClass} />}
+          element={
+            <button className={"flex items-center justify-center"}>
+              <RotateCw className={tailClass} />
+            </button>
+          }
           tooltip={"Loading..."}
         />
       );
@@ -25,7 +28,12 @@ const ThemeSwitcher = () => {
       return (
         <TooltipElement
           element={
-            <Sun onClick={() => setTheme("light")} className={tailClass} />
+            <button
+              className={"flex items-center justify-center"}
+              onClick={() => setTheme("light")}
+            >
+              <Sun className={tailClass} />
+            </button>
           }
           tooltip={"Switch to Light mode"}
         />
@@ -34,7 +42,12 @@ const ThemeSwitcher = () => {
       return (
         <TooltipElement
           element={
-            <Moon onClick={() => setTheme("dark")} className={tailClass} />
+            <button
+              className={"flex items-center justify-center"}
+              onClick={() => setTheme("dark")}
+            >
+              <Moon className={tailClass} />
+            </button>
           }
           tooltip={"Switch to Dark mode"}
         />
