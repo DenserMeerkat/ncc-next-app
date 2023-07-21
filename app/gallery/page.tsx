@@ -1,3 +1,4 @@
+import GalleryPosters from "@/components/Gallery/GaleryPosters";
 import GalleryCards from "@/components/Gallery/GalleryCards";
 import RouteChange from "@/components/common/RouteChange";
 
@@ -7,6 +8,7 @@ export default function Gallery() {
       <div className="h-fit">
         <RouteChange />
         <GalleryCards />
+        <GalleryPosters />
       </div>
     </main>
   );

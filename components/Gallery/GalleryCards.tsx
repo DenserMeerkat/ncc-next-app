@@ -15,7 +15,7 @@ const GalleryCards = () => {
           icon={Focus}
           title="Through the Lens"
         />
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3">
           {gallery.map((item) => (
             <GalleryThumb
               key={item.id}
@@ -44,7 +44,7 @@ const GalleryThumb = (props: any) => {
       key={id}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`col-span-6 sm:col-span-4
+      className={`
     relative m-1 sm:m-1.5 md:m-2 lg:m-3 border-2 rounded-md overflow-hidden
     bg-rose-200/[0.7] dark:bg-slate-800/[0.7] border-rose-300 select-none
     drop-shadow-sm hover:drop-shadow-xl hover:cursor-pointer hover:border-rose-500 
