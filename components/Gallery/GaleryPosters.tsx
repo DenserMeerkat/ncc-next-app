@@ -48,7 +48,7 @@ const GalleryPosters = () => {
             side={"top"}
             className="realtive h-fit rounded-md border mx-auto max-w-5xl"
           >
-            <SheetHeader className="h-10 sm:h-6 md:h-0"></SheetHeader>
+            <SheetHeader className="h-10 sm:h-4 md:h-0"></SheetHeader>
             <ImageGallery
               thumbnailPosition={isNonMobile ? "left" : "bottom"}
               items={galleryImages}
@@ -58,12 +58,12 @@ const GalleryPosters = () => {
               lazyLoad={true}
             />
           </SheetContent>
-          <div className="grid grid-cols-2 sm:grid-cols-3">
+          <div className="grid grid-cols-2 min-[500px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
             {reversedPosters.map((item, index) => (
               <SheetTrigger key={item.id} asChild>
                 <div
                   key={item.id}
-                  className="p-1 hover:scale-[101%] hover:p-0 m-1 md:m-1.5 xl:m-2 rounded-md overflow-hidden border-2 
+                  className="p-1 hover:scale-[101%] hover:p-0 m-0.5 md:m-1 rounded-md overflow-hidden border-2 
                 border-gray-400 dark:border-slate-950 bg-rose-200 dark:bg-slate-800 transition-transform"
                   onClick={() => handleImageClick(index)}
                 >
