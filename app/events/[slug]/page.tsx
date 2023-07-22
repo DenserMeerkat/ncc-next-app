@@ -2,7 +2,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import { getReportMetadata } from "../../../components/utils/getReportMetadata";
 import ReportContent from "../../../components/Events/ReportContent";
-import RouteChange from "@/components/common/RouteChange";
 
 const getReportContent = (slug: string) => {
   const folder = "reports/eventReports/";

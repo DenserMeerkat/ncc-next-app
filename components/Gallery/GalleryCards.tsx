@@ -5,6 +5,7 @@ import { Focus, Album } from "lucide-react";
 import { gallery } from "@/resources/gallery";
 import Image from "next/legacy/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Link from "next/link";
 
 const GalleryCards = () => {
   return (
@@ -22,6 +23,7 @@ const GalleryCards = () => {
               title={item.title}
               thumb={item.thumb}
               alt={item.alt}
+              slug={item.slug}
             />
           ))}
         </div>
@@ -38,9 +40,11 @@ const GalleryThumb = (props: any) => {
   const title = props.title;
   const thumb = props.thumb;
   const alt = props.alt;
+  const slug = props.slug;
   const blurDataURL = thumb.replace("images", "min_images");
   return (
-    <div
+    <Link
+      href={`/gallery/${slug}`}
       key={id}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -73,6 +77,6 @@ const GalleryThumb = (props: any) => {
           {title}
         </h3>
       </div>
-    </div>
+    </Link>
   );
 };
