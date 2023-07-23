@@ -41,7 +41,7 @@ Please ensure that your code follows the project's coding standards and conventi
 
 ## Reporting Issues
 
-If you encounter any issues or have suggestions for improvements, please [open an issue](link-to-issue-tracker) on our issue tracker. We appreciate your feedback!
+If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/DenserMeerkat/ncc-next-app/issues/new) on our issue tracker. We appreciate your feedback!
 
 <!-- ## License
 
@@ -49,6 +49,6 @@ This project is licensed under the [MIT License](link-to-license). -->
 
 ## Contact
 
-For any inquiries or questions, you can reach us at [contact@email.com](mailto:contact@email.com).
+For any inquiries or questions, you can reach us at [annaunivnccarmy@gmail.com](mailto:annaunivnccarmy@gmail.com).
 
 Let's join hands in creating a remarkable digital presence for our esteemed NCC unit!
