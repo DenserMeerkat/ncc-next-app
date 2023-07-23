@@ -1,21 +1,8 @@
 # Anna University NCC Army Wing
 
-<table width="100%">
-  <thead>
-    <tr>
-      <th width="33%">National Cadet Corps</th>
-      <th width="33%">Anna University</th>
-      <th width="33%">Azadi ka Amrit Mahotsav</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="33%" style="text-align: center;"><img src="public/images/logos/ncc_logo.png" alt="NCC logo"/></td>
-      <td width="33%" style="text-align: center;"><img src="public/images/logos/AU_logo_100.png"alt="AU logo"/></td>
-      <td width="33%" style="text-align: center;"><img src="public/images/logos/azadi_ka_amrit_100.png"alt="Azadi ka Amrit Mahotsav"/></td>
-    </tr>
-  </tbody>
-</table>
+| NCC                                            | Anna University                                  | Azadi ka Amrit Mahotsav                                                  |
+| ---------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------ |
+| ![NCC Logo](/public/images/logos/ncc_logo.png) | ![AU logo](/public/images/logos/AU_logo_100.png) | ![Azadi ka Amrit Mahotsav ](/public/images/logos/azadi_ka_amrit_100.png) |
 
 ## Introduction
 
@@ -54,7 +41,7 @@ Please ensure that your code follows the project's coding standards and conventi
 
 ## Reporting Issues
 
-If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/DenserMeerkat/ncc-next-app/issues/new) on our issue tracker. We appreciate your feedback!
+If you encounter any issues or have suggestions for improvements, please [open an issue](link-to-issue-tracker) on our issue tracker. We appreciate your feedback!
 
 <!-- ## License
 
@@ -62,6 +49,6 @@ This project is licensed under the [MIT License](link-to-license). -->
 
 ## Contact
 
-For any inquiries or questions, you can reach us at [annaunivnccarmy@gmail.com](mailto:annaunivnccarmy@gmail.com).
+For any inquiries or questions, you can reach us at [contact@email.com](mailto:contact@email.com).
 
 Let's join hands in creating a remarkable digital presence for our esteemed NCC unit!
