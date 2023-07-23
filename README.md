@@ -1,8 +1,21 @@
 # Anna University NCC Army Wing
 
-| NCC                                            | Anna University                                  | Azadi ka Amrit Mahotsav                                                  |
-| ---------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------ |
-| ![NCC Logo](/public/images/logos/ncc_logo.png) | ![AU logo](/public/images/logos/AU_logo_100.png) | ![Azadi ka Amrit Mahotsav ](/public/images/logos/azadi_ka_amrit_100.png) |
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="33%">National Cadet Corps</th>
+      <th width="33%">Anna University</th>
+      <th width="33%">Azadi ka Amrit Mahotsav</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="33%" style="text-align: center;"><img src="public/images/logos/ncc_logo.png" alt="NCC logo"/></td>
+      <td width="33%" style="text-align: center;"><img src="public/images/logos/AU_logo_100.png"alt="AU logo"/></td>
+      <td width="33%" style="text-align: center;"><img src="public/images/logos/azadi_ka_amrit_100.png"alt="Azadi ka Amrit Mahotsav"/></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Introduction
 
