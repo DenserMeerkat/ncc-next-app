@@ -11,7 +11,7 @@ const heroLogos = [
     padding: 3,
     height: 80,
     width: 80,
-    src: "/images/logos/AU_logo_1.png",
+    src: "/images/logos/AU_logo_100.png",
     alt: "Anna University Logo",
     tooltip: "Anna University ",
   },

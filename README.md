@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anna University NCC Army Wing
 
-## Getting Started
+| NCC                                            | Anna University                                  | Azadi ka Amrit Mahotsav                                                  |
+| ---------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------ |
+| ![NCC Logo](/public/images/logos/ncc_logo.png) | ![AU logo](/public/images/logos/AU_logo_100.png) | ![Azadi ka Amrit Mahotsav ](/public/images/logos/azadi_ka_amrit_100.png) |
 
-First, run the development server:
+## Introduction
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Welcome to the repository for the official website of the National Cadet Corps (NCC) Army Wing at Anna university. This website serves as a platform to showcase the vibrant and inspiring world of NCC at our college.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About NCC
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The National Cadet Corps is a premier youth organization that aims to develop character, discipline, leadership, and a spirit of service among the cadets. At [Your College Name], we take pride in our NCC unit, which has been fostering the values of patriotism and social responsibility in our cadets.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Detailed information about our NCC unit, including our mission, objectives, and values.
+- Highlights of our training programs, camps, and special events.
+- Galleries featuring memorable moments from our NCC journey.
+- Updates on the latest events, news, and achievements.
+- An overview of our Associate NCC Officers (ANOs) and their contributions.
+- Opportunities to get involved and join the NCC family.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React, Tailwind, and Typescript for front-end development.
+- Next.js for building a fast, responsive, and SEO-friendly website.
+- Vercel for deployment and hosting the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## How to Contribute
 
-## Deploy on Vercel
+We welcome contributions to enhance the NCC website. If you wish to contribute, follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork this repository.
+2. Create a new branch: `git checkout -b my-feature-branch`.
+3. Make your changes and commit them: `git commit -m "Add my feature"`.
+4. Push to the branch: `git push origin my-feature-branch`.
+5. Submit a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please ensure that your code follows the project's coding standards and conventions.
+
+## Reporting Issues
+
+If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/DenserMeerkat/ncc-next-app/issues/new) on our issue tracker. We appreciate your feedback!
+
+<!-- ## License
+
+This project is licensed under the [MIT License](link-to-license). -->
+
+## Contact
+
+For any inquiries or questions, you can reach us at [annaunivnccarmy@gmail.com](mailto:annaunivnccarmy@gmail.com).
+
+Let's join hands in creating a remarkable digital presence for our esteemed NCC unit!

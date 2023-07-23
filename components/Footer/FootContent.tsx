@@ -38,9 +38,7 @@ export const FootContent = () => {
           </div>
           <AtSign className="col-span-1" size={20} />
           <div className="col-span-7">
-            <p className="text-md">
-              <s>nccannauniv@gmail.com</s>
-            </p>
+            <p className="text-md">annaunivnccarmy@gmail.com</p>
           </div>
           <PhoneOutgoing className="col-span-1" size={18} />
           <div className="col-span-7">
