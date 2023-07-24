@@ -4,6 +4,12 @@
 | ---------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------ |
 | ![NCC Logo](/public/images/logos/ncc_logo.png) | ![AU logo](/public/images/logos/AU_logo_100.png) | ![Azadi ka Amrit Mahotsav ](/public/images/logos/azadi_ka_amrit_100.png) |
 
+<!-- <p>
+<img src="public/images/logos/ncc_logo.png" alt="NCC Logo"/>
+<img src="public/images/logos/AU_logo_100.png" alt="AU logo"/>
+<img src="public/images/logos/azadi_ka_amrit_100.png" alt="Azadi ka Amrit Mahotsav"/>
+</p> -->
+
 ## Introduction
 
 Welcome to the repository for the official website of the National Cadet Corps (NCC) Army Wing at Anna university. This website serves as a platform to showcase the vibrant and inspiring world of NCC at our college.

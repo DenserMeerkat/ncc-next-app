@@ -1,7 +1,7 @@
 export const gallery = [
   {
     id: 0,
-    slug: "camps-&-training",
+    slug: "camps-and-training",
     title: "Camps & Training",
     thumb: "/images/gallery/thumbs/camps_&_training.jpg",
     alt: "Camps & Training",
@@ -29,7 +29,7 @@ export const gallery = [
   },
   {
     id: 4,
-    slug: "events-&-campaigns",
+    slug: "events-and-campaigns",
     title: "Events & Campaigns",
     thumb: "/images/gallery/thumbs/events_&_campaigns.jpg",
     alt: "Events & Campaigns",
