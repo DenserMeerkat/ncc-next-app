@@ -1,14 +1,14 @@
 const heroLogos = [
   {
-    padding: 4,
-    height: 100,
-    width: 100,
+    padding: 2,
+    height: 80,
+    width: 80,
     src: "/images/logos/ncc_icon_png.png",
     alt: "National Cadet Corps Logo",
     tooltip: "National Cadet Corps",
   },
   {
-    padding: 3,
+    padding: 2,
     height: 80,
     width: 80,
     src: "/images/logos/AU_logo_100.png",
