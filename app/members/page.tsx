@@ -1,4 +1,5 @@
-import Current from "@/components/Members/Current";
+import Leaders from "@/components/Members/Leaders";
+import Officers from "@/components/Members/Officers";
 import RouteChange from "@/components/common/RouteChange";
 
 export default function Members() {
@@ -6,7 +7,8 @@ export default function Members() {
     <main>
       <div className="h-fit">
         <RouteChange />
-        <Current />
+        <Officers />
+        <Leaders />
       </div>
     </main>
   );
