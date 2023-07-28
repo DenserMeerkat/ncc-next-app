@@ -15,17 +15,24 @@ const Leaders = () => {
     currentBatch.cqms,
   ];
   return (
-    <div className="h-fit">
+    <div className="h-fit mb-6">
       <div className="max-w-6xl mx-auto py-10">
         <SectionHeading
           className={"mb-6"}
           icon={Medal}
           title="Meet our Cadet Leaders"
         />
+        <div className="flex items-center justify-center mb-4 sm:mb-6">
+          {LeaderCard({ ...leaders[0], id: 0 })}
+        </div>
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 px-0 min-[350px]:px-3  mb-4 sm:mb-6">
+          {LeaderCard({ ...leaders[1], id: 1 })}
+          {LeaderCard({ ...leaders[2], id: 2 })}
+          {LeaderCard({ ...leaders[3], id: 3 })}
+        </div>
         <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 px-0 min-[350px]:px-3">
-          {leaders.map((leader: any, index: number) =>
-            LeaderCard({ ...leader, id: index })
-          )}
+          {LeaderCard({ ...leaders[4], id: 4 })}
+          {LeaderCard({ ...leaders[5], id: 5 })}
         </div>
       </div>
     </div>
@@ -71,15 +78,16 @@ const LeaderCard = (props: any) => {
             </h3>
           </div>
         </div>
-        <div className="text-[0.68rem] self-start lg:self-auto text-left max-[330px]:pl-2 max-[400px]:pl-4 max-[1100px]:pl-6">
-          <p className="dark:text-slate-300 text-xs font-bold dark:font-medium">
-            {desig}
-          </p>
-          <p
-            className={`dark:text-slate-400 max-[340px]:text-[0.65rem] ${
-              id === 0 ? "text-[0.62rem]" : ""
-            }`}
-          >
+        <div className="text-[0.68rem] self-start text-left max-[400px]:pl-4 max-[1100px]:pl-6 pl-3">
+          <div className="flex gap-1 items-center">
+            <p className="dark:text-slate-200 text-sm font-bold dark:font-medium">
+              {desig}
+            </p>
+            <p className={`dark:text-slate-300 max-[340px]:text-[0.65rem]`}>
+              of
+            </p>
+          </div>
+          <p className={`dark:text-slate-300 max-[340px]:text-[0.65rem]`}>
             {dept}
           </p>
           <p className="dark:text-slate-400 text-[0.6rem]">Anna University</p>
