@@ -25,12 +25,12 @@ const Leaders = () => {
         <div className="flex items-center justify-center mb-4 sm:mb-6">
           {LeaderCard({ ...leaders[0], id: 0 })}
         </div>
-        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 px-0 min-[350px]:px-3  mb-4 sm:mb-6">
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 px-0 min-[350px]:px-3  mb-4 sm:mb-6">
           {LeaderCard({ ...leaders[1], id: 1 })}
           {LeaderCard({ ...leaders[2], id: 2 })}
           {LeaderCard({ ...leaders[3], id: 3 })}
         </div>
-        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 px-0 min-[350px]:px-3">
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 px-0 min-[350px]:px-3">
           {LeaderCard({ ...leaders[4], id: 4 })}
           {LeaderCard({ ...leaders[5], id: 5 })}
         </div>
@@ -79,15 +79,10 @@ const LeaderCard = (props: any) => {
           </div>
         </div>
         <div className="text-[0.68rem] self-start text-left max-[400px]:pl-4 max-[1100px]:pl-6 pl-3">
-          <div className="flex gap-1 items-center">
-            <p className="dark:text-slate-200 text-sm font-bold dark:font-medium">
-              {desig}
-            </p>
-            <p className={`dark:text-slate-300 max-[340px]:text-[0.65rem]`}>
-              of
-            </p>
-          </div>
-          <p className={`dark:text-slate-300 max-[340px]:text-[0.65rem]`}>
+          <p className="dark:text-slate-300 dark:text-[0.8rem] font-bold dark:font-bold">
+            {desig}
+          </p>
+          <p className={`dark:text-slate-400 max-[340px]:text-[0.65rem]`}>
             {dept}
           </p>
           <p className="dark:text-slate-400 text-[0.6rem]">Anna University</p>
