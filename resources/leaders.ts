@@ -7,7 +7,7 @@ export const currentBatch = {
     alt: "",
     plat: "Signals Platoon",
     rank: "Cadet Senior Under Officer",
-    dept: "",
+    dept: "Dept. of Leather Technology",
   },
   cuo1: {
     id: 1,
@@ -16,7 +16,7 @@ export const currentBatch = {
     alt: "",
     plat: "Engineers Platoon",
     rank: "Cadet Under Officer",
-    dept: "",
+    dept: "Dept. of Mechanical Engineering",
   },
   cuo2: {
     id: 2,
@@ -25,7 +25,7 @@ export const currentBatch = {
     alt: "",
     plat: "EME Platoon",
     rank: "Cadet Under Officer",
-    dept: "",
+    dept: "Dept. of Electronics and Communication Engineering",
   },
   cuo3: {
     id: 3,
@@ -34,7 +34,7 @@ export const currentBatch = {
     alt: "",
     plat: "Signals Platoon",
     rank: "Cadet Under Officer",
-    dept: "",
+    dept: "Dept. of Ceramic Technology",
   },
   cqms: {
     id: 4,
@@ -43,7 +43,7 @@ export const currentBatch = {
     alt: "",
     plat: "Signals Platoon",
     rank: "Company Quarter Master Sergeant",
-    dept: "",
+    dept: "Dept. of Applied Science and Technology",
   },
   csm: {
     id: 5,
@@ -52,6 +52,6 @@ export const currentBatch = {
     alt: "",
     plat: "Engineers Platoon",
     rank: "Company Sergeant Major",
-    dept: "",
+    dept: "Dept. of Electronics and Communication Engineering",
   },
 };
