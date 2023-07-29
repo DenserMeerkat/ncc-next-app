@@ -39,7 +39,7 @@ export const FootContent = () => {
           </div>
           <AtSign className="col-span-1 h-4 w-4" size={20} />
           <div className="col-span-7 mb-1">
-            <p>annaunivnccarmy@gmail.com</p>
+            <p>annaunivncc@gmail.com</p>
           </div>
           {anos.map((ano) => (
             <div className="col-span-8" key={ano.id}>
