@@ -122,7 +122,7 @@ const ReportCarousel = (props: any) => {
               </div>
               {captions.length != 0 && (
                 <div className="py-0.5 flex items-center justify-center">
-                  <p className="text-xs sm:text-sm">This is caption</p>
+                  <p className="text-xs sm:text-sm">{captions[index]}</p>
                 </div>
               )}
             </div>

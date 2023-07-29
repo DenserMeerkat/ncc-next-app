@@ -22,7 +22,7 @@ export const FootContent = () => {
       bg-slate-50 dark:bg-slate-950/[0.3] drop-shadow-sm dark:drop-shadow-none`}
     >
       <div className="mt-4 w-fit mx-auto min-[500px]:w-full min-[500px]:mx-auto">
-        <h4 className="text-base font-bold pl-1 sm:px-8">
+        <h4 className="text-base font-bold pl-1 sm:px-8 pb-4 md:pb-0">
           NCC Army Wing, Anna University
         </h4>
         <div className="pl-2 sm:px-7 mt-2 grid grid-cols-8 gap-4 gap-y-2">

@@ -1,14 +1,14 @@
 ---
 title: "Puneet Sagar Abhiyan"
 location: "Besant Nagar Beach, Chennai"
-date: "25-09-2023"
+date: "25-09-2022"
 images:
   [
     "/images/reports/psag1.jpg",
     "/images/reports/psag2.jpg",
     "/images/reports/psag3.jpg",
   ]
-thumb: "/images/reports/psag3.jpg"
+thumb: "/images/reports/psag2.jpg"
 captions: []
 authors: []
 tags: []
