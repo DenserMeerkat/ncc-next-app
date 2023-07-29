@@ -2,12 +2,14 @@ export const anos = [
   {
     id: 0,
     plat: "Engineers Platoon",
-    name: "Capt. Dr. A Sursh Babu",
+    name: "Capt. Dr. A Suresh Babu",
     rank: "Captain",
     src: "/images/anos/Engr_ANO_1.jpg",
     alt: "Capt. Dr. A Sursh Babu",
-    desig: "Head of the Department",
+    desig: "Professor",
     dept: "Dept. of Manufacturing Engineering",
+    mobile: "98405 89469",
+    email: "subaceg@gmail.com",
   },
   {
     id: 1,
@@ -18,6 +20,8 @@ export const anos = [
     alt: "Lt. Dr. K Padmanabhan Panchu",
     desig: "Associate Professor",
     dept: "Dept. of Industrial Engineering",
+    mobile: "89399 34561",
+    email: "panchu81@gmail.com",
   },
   {
     id: 2,
@@ -26,7 +30,9 @@ export const anos = [
     rank: "Lieutenant",
     src: "/images/anos/Sig_ANO.jpg",
     alt: "Lt. Dr. R Neelakandan",
-    desig: "Professor",
+    desig: "Professor and Head",
     dept: "Dept. of Textile Technology",
+    mobile: "94444 11754",
+    email: "neelakandanauc@gmail.com",
   },
 ];

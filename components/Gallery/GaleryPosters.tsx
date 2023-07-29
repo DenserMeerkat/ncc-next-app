@@ -40,7 +40,7 @@ const GalleryPosters = () => {
   }));
 
   return (
-    <div className="bg-slate-100 dark:bg-slate-900/[0.7] relative h-max py-12">
+    <div className="relative h-max py-12">
       <div className="max-w-5xl mx-auto">
         <SectionHeading className="mb-6" icon={Focus} title="Posters" />
         <Sheet open={isGalleryOpen} onOpenChange={setIsGalleryOpen}>

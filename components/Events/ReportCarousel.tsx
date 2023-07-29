@@ -8,6 +8,7 @@ import Image from "next/legacy/image";
 
 const ReportCarousel = (props: any) => {
   const images = props.images;
+  const captions: string[] = props.captions;
   const length = images.length;
   const [active, setActive] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
@@ -119,9 +120,11 @@ const ReportCarousel = (props: any) => {
                   quality={100}
                 />
               </div>
-              <div className="py-0.5 flex items-center justify-center">
-                <p className="text-xs sm:text-sm">This is caption</p>
-              </div>
+              {captions.length != 0 && (
+                <div className="py-0.5 flex items-center justify-center">
+                  <p className="text-xs sm:text-sm">This is caption</p>
+                </div>
+              )}
             </div>
           ))}
         </Carousel>

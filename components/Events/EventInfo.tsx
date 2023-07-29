@@ -7,7 +7,7 @@ import TooltipElement from "../common/TooltipElement";
 
 const EventInfo = () => {
   return (
-    <div className="bg-slate-100 dark:bg-slate-900/[0.6] relative h-fit">
+    <div className=" h-fit">
       <div className="max-w-5xl mx-auto py-12 flex flex-col gap-y-12">
         <SectionHeading icon={SquareGantt} title={"Standout Events"} />
         {eventInfo.map((event) => (
@@ -37,7 +37,7 @@ const EventCard = (props: any) => {
     <div
       key={id}
       className="flex items-center gap-4 lg:px-8 flex-col min-[700px]:even:flex-row-reverse min-[700px]:odd:flex-row lg:rounded-lg py-6 border 
-      odd:border-blue-200 even:border-rose-200 odd:bg-blue-100 even:bg-rose-100 even:selection:bg-slate-200  even:dark:border-slate-700 odd:dark:border-slate-700 odd:dark:bg-slate-800 even:dark:bg-slate-800/[0.5] "
+      odd:border-blue-200 even:border-rose-200 odd:bg-blue-100 even:bg-rose-100 even:selection:bg-slate-200  even:dark:border-slate-700 odd:dark:border-slate-800 odd:dark:bg-sky-600/[0.1] even:dark:bg-slate-800/[0.5] "
     >
       <TooltipElement
         element={

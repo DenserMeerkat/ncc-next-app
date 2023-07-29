@@ -11,6 +11,7 @@ const ReportContent = (props: any) => {
   const formattedDate = prettyDate(date);
   const content = props.content;
   const images = props.images;
+  const captions = props.captions;
   return (
     <div className="flex flex-col-reverse sm:flex-col xl:flex-row py-8 justify-center items-center xl:items-start gap-12">
       <div
@@ -38,7 +39,7 @@ const ReportContent = (props: any) => {
               </p>
             </div>
           </div>
-          <ReportCarousel images={images} />
+          <ReportCarousel images={images} captions={captions} />
         </div>
         <article className="px-1 prose prose-sm sm:prose-base max-w-none dark:prose-invert overflow-x-auto">
           <Markdown>{content}</Markdown>

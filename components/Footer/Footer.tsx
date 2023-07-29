@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className=" border-t border-gray-300 dark:border-slate-800/[0.7] bg-slate-100 dark:bg-slate-900/[0.8]">
       <div className="max-w-7xl mx-auto py-4 pb-6 flex flex-wrap items-center justify-center gap-1 sm:gap-4">
         <iframe
-          className={`h-72 lg:h-96 rounded-sm sm:rounded-md m-2 border-2 border-gray-300 dark:border-slate-700 
+          className={`h-72 lg:h-[26rem] rounded-sm sm:rounded-md m-2 border-2 border-gray-300 dark:border-slate-700 
           min-w-[300px]  drop-shadow-sm dark:drop-shadow-none select-none`}
           src={mapSrc}
           width="600"

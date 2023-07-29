@@ -26,6 +26,7 @@ const ReportPage = (props: any) => {
   const location = report.data.location;
   const thumb = report.data.thumb;
   const images = report.data.images;
+  const captions = report.data.captions;
   const content = report.content;
   return (
     <ReportContent
@@ -35,6 +36,7 @@ const ReportPage = (props: any) => {
       location={location}
       thumb={thumb}
       images={images}
+      captions={captions}
     />
   );
 };
