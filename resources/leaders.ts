@@ -3,8 +3,7 @@ export const currentBatch = {
   csuo: {
     id: 0,
     name: "CSUO Pramoth Kumar A",
-    src: "",
-    alt: "",
+    src: "/images/leaders/csuo.jpg",
     desig: "Student",
     plat: "Signals Platoon",
     rank: "Cadet Senior Under Officer",
@@ -13,8 +12,7 @@ export const currentBatch = {
   cuo1: {
     id: 1,
     name: "CUO Karen Jerusha J",
-    src: "",
-    alt: "",
+    src: "/images/leaders/cuo1.jpg",
     desig: "Student",
     plat: "Engineers Platoon",
     rank: "Cadet Under Officer",
@@ -23,8 +21,7 @@ export const currentBatch = {
   cuo2: {
     id: 2,
     name: "CUO Reshma S",
-    src: "",
-    alt: "",
+    src: "images/leaders/cuo2.jpg",
     desig: "Student",
     plat: "EME Platoon",
     rank: "Cadet Under Officer",
@@ -33,8 +30,7 @@ export const currentBatch = {
   cuo3: {
     id: 3,
     name: "CUO Elasukumaran E",
-    src: "",
-    alt: "",
+    src: "images/leaders/cuo3.jpg",
     desig: "Student",
     plat: "Signals Platoon",
     rank: "Cadet Under Officer",
@@ -43,8 +39,7 @@ export const currentBatch = {
   cqms: {
     id: 4,
     name: "CQMS Pearlina Marie Rein K",
-    src: "",
-    alt: "",
+    src: "images/leaders/cqms.jpg",
     desig: "Student",
     plat: "Signals Platoon",
     rank: "Company Quarter Master Sergeant",
@@ -53,8 +48,7 @@ export const currentBatch = {
   csm: {
     id: 5,
     name: "CSM Jayaharish M R",
-    src: "",
-    alt: "",
+    src: "images/leaders/csm.jpg",
     desig: "Student",
     plat: "Engineers Platoon",
     rank: "Company Sergeant Major",

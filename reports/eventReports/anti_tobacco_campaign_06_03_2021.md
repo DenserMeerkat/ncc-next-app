@@ -1,5 +1,5 @@
 ---
-title: "Anti-TObacco Campaign"
+title: "Anti-Tobacco Campaign"
 location: "Anna University, Chennai"
 date: "06-03-2021"
 images:

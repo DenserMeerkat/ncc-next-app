@@ -31,7 +31,7 @@ const ReportCarousel = (props: any) => {
     setActive(active > 0 ? active - 1 : length - 1);
   };
   return (
-    <div className="flex flex-col lg:flex-row gap-4 xl:gap-8 mt-8 items-center">
+    <div className="flex flex-col lg:flex-row gap-4 xl:gap-8 mt-8 items-center max-w-full">
       <div className="flex-wrap flex flex-row lg:flex-col select-none ">
         {images.map((image: string, index: number) => (
           <div
@@ -109,12 +109,13 @@ const ReportCarousel = (props: any) => {
           onChange={handleCarouselChange}
         >
           {images.map((image: string, index: number) => (
-            <div key={index} className="">
-              <div className="select-none">
+            <div key={index} className="max-w-full">
+              <div className="relative select-none max-w-full ">
                 <Image
                   src={image}
                   width={1100}
                   height={750}
+                  layout="responsive"
                   alt={image}
                   loading="lazy"
                   quality={100}
