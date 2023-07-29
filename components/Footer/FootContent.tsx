@@ -29,7 +29,7 @@ export const FootContent = () => {
           <MapPin className="col-span-1 h-4 w-4" size={20} />
           <div className="col-span-7">
             <p>
-              1 TN Composite Technical Company,
+              1 (TN) Composite Technical Company,
               <br />
               Mardras &lsquo;B&rsquo; group,
               <br />
