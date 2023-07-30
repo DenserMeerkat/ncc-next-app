@@ -55,6 +55,6 @@ This project is licensed under the [MIT License](link-to-license). -->
 
 ## Contact
 
-For any inquiries or questions, you can reach us at [annaunivnccarmy@gmail.com](mailto:annaunivnccarmy@gmail.com).
+For any inquiries or questions, you can reach us at [annaunivncc@gmail.com](mailto:annaunivncc@gmail.com).
 
 Let's join hands in creating a remarkable digital presence for our esteemed NCC unit!
