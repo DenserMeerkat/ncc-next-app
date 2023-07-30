@@ -1,5 +1,5 @@
 ---
-title: "Anti-TObacco Campaign"
+title: "Anti-Tobacco Campaign"
 location: "Anna University, Chennai"
 date: "06-03-2021"
 images:
@@ -38,6 +38,7 @@ was supported by Lt. Dr. PadmanabanPanchu K.
 - **ANOs**: 1
 - **PI Staff**: Nil
 - **Cadets**: 20
+- **Civilians** : Nil
 
 ### Cadet Split-up
 
@@ -77,5 +78,3 @@ was supported by Lt. Dr. PadmanabanPanchu K.
         </tr>
     </tbody>
 </table>
-
-- **Civilians** : Nil

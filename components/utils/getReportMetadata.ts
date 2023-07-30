@@ -45,7 +45,7 @@ export function getLatestReportMetadata(): ReportMetadata[] {
       location: matterResult.data.location,
       thumb: matterResult.data.thumb,
       images: matterResult.data.images,
-      captions: [],
+      captions: matterResult.data.captions,
       slug: fileName.replace(".md", ""),
     };
   });

@@ -75,7 +75,7 @@ const Hero = () => {
               text-gray-700 dark:text-white/[0.8] hover:bg-slate-300 hover:border-slate-500 transition-colors select-none
               dark:border-slate-500 dark:bg-slate-700 dark:hover:bg-slate-800 dark:hover:border-slate-700`}
             >
-              <Link href="#">
+              <Link href="/about">
                 <p>Learn More</p>
               </Link>
             </button>

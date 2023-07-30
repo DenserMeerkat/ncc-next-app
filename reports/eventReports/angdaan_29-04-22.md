@@ -96,7 +96,7 @@ Poorvika as the certificate sponsor.
             <td>04</td>
             <td>08</td>
         </tr>
-                <tr>
+        <tr>
             <td rowspan="4">III Year</td>
         </tr>
         <tr>

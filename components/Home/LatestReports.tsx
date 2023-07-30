@@ -95,7 +95,7 @@ export default function LatestReports(props: any) {
 
 const CarouselItem = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="w-fit border bg-zinc-100 dark:bg-slate-900 rounded-sm md:rounded-md m-1 ">
+    <div className="w-fit bg-zinc-100 dark:bg-slate-900 rounded-md m-1 ">
       {children}
     </div>
   );

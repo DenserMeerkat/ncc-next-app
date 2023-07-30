@@ -10,7 +10,7 @@ images:
 thumb: "/images/reports/ebsb_drdo_camp_09_05_2023_1.jpg"
 captions:
   [
-    "Cadets from 1 (TN) CTC NCC Unit",
+    "Cadets from Army Wing Anna University",
     "Group photo of all the participants of the camp at DRDO, Avadi, Chennai.",
   ]
 authors: []

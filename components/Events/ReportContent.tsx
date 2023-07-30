@@ -31,7 +31,7 @@ const ReportContent = (props: any) => {
             </h1>
             <hr />
             <div className="flex flex-wrap flex-col sm:flex-row justify-between">
-              <p className="text-slate-700 dark:text-slate-400 mt-2">
+              <p className="text-sm text-slate-700 dark:text-slate-400 mt-2">
                 {location}
               </p>
               <p className="text-xs text-slate-700 dark:text-slate-400 mt-2">

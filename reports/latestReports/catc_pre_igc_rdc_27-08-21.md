@@ -1,6 +1,6 @@
 ---
 title: "CATC cum Pre IGC RDC TRG camp"
-location: "Anna University, Chennai"
+location: "Loyola College, Chennai"
 date: "27-08-2021"
 images:
   [
@@ -70,7 +70,7 @@ The selected cadets were trained for the next level IGC selection at NTA, Idayap
             <td>-</td>
             <td>01</td>
         </tr>
+        <tr>
+        </tr>
     </tbody>
 </table>
-
----

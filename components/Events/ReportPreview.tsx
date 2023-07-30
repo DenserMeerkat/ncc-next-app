@@ -33,7 +33,7 @@ const ReportPreview = (props: any) => {
       </CardHeader>
       <div className="p-2 md:p-3">
         <p className="text-[0.7rem] sm:text-[0.75rem] md:text-[0.78rem] dark:text-slate-400 tracking-tight">
-          {location.length > 37 ? location.slice(0, 37) + "..." : title}
+          {location.length > 30 ? location.slice(0, 30) + "..." : location}
         </p>
         <div className="flex justify-end">
           <p

@@ -4,9 +4,23 @@ import { MdOutlineNewReleases } from "react-icons/md";
 import LatestReports from "./LatestReports";
 import { getLatestReportMetadata } from "../utils/getReportMetadata";
 import ReportPreview from "../Events/ReportPreview";
+import { ReportMetadata } from "../utils/ReportMetadata";
 
-const Latest = () => {
-  const reportMetadata = getLatestReportMetadata();
+const Latest: React.FC = () => {
+  const reportMetadata: ReportMetadata[] = getLatestReportMetadata();
+  reportMetadata.sort((a, b) => {
+    const dateA = new Date(
+      Number(a.date.slice(6, 10)),
+      Number(a.date.slice(3, 5)) - 1,
+      Number(a.date.slice(0, 2))
+    );
+    const dateB = new Date(
+      Number(b.date.slice(6, 10)),
+      Number(b.date.slice(3, 5)) - 1,
+      Number(b.date.slice(0, 2))
+    );
+    return dateB.getTime() - dateA.getTime();
+  });
   const years: React.ReactElement<any>[] = [];
   reportMetadata.map((report) => {
     years.push(

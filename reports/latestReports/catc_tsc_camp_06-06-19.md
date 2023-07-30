@@ -1,6 +1,6 @@
 ---
 title: "CATC cum TSC camp"
-location: "Anna University, Chennai-25"
+location: "Anna University, Chennai"
 date: "06-06-2019"
 images:
   [

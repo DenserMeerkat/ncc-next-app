@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SectionHeading from "../common/SectionHeading";
-import { Focus, Album } from "lucide-react";
+import { Album } from "lucide-react";
 import { posters } from "@/resources/posters";
 import Image from "next/legacy/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -42,7 +42,7 @@ const GalleryPosters = () => {
   return (
     <div className="relative h-max py-12">
       <div className="max-w-5xl mx-auto">
-        <SectionHeading className="mb-6" icon={Focus} title="Posters" />
+        <SectionHeading className="mb-6" icon={Album} title="Posters" />
         <Sheet open={isGalleryOpen} onOpenChange={setIsGalleryOpen}>
           <SheetContent
             side={"top"}
@@ -58,13 +58,13 @@ const GalleryPosters = () => {
               lazyLoad={true}
             />
           </SheetContent>
-          <div className="grid grid-cols-2 min-[500px]:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
+          <div className="grid grid-cols-3 min-[650px]:grid-cols-4 lg:grid-cols-5">
             {reversedPosters.map((item, index) => (
               <SheetTrigger key={item.id} asChild>
                 <div
                   key={item.id}
-                  className="p-1 hover:scale-[101%] hover:p-0 m-0.5 md:m-1 rounded-md overflow-hidden border-2 
-                border-gray-400 dark:border-slate-950 bg-rose-200 dark:bg-slate-800 transition-transform"
+                  className="p-0.5 hover:scale-[101%] hover:p-0 m-0 md:m-0.5 lg:m-1 md:rounded-md overflow-hidden border-2 
+                border-gray-400 dark:border-slate-950 bg-rose-100 dark:bg-slate-800 transition-transform"
                   onClick={() => handleImageClick(index)}
                 >
                   <AspectRatio ratio={1} className="relative">
@@ -74,7 +74,7 @@ const GalleryPosters = () => {
                       alt="Poster"
                       blurDataURL={item.src.replace("images", "min_images")}
                       placeholder="blur"
-                      className="rounded-sm opacity-95 dark:opacity-90"
+                      className="md:rounded-sm opacity-95 dark:opacity-90"
                     />
                   </AspectRatio>
                 </div>
