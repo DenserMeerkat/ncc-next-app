@@ -4,7 +4,7 @@ location: "Anna University, Chennai"
 date: "09-05-2023"
 images: ["/images/reports/sportsday1.jpg"]
 thumb: "/images/reports/sportsday1.jpg"
-captions: [Cadets of Sports Day Event]
+captions: ["Cadets of Sports Day Event"]
 authors: []
 tags: []
 ---

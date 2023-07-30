@@ -4,7 +4,7 @@ location: "Anna University, Chennai"
 date: "29-04-2022"
 images: ["/images/reports/angdaan_29-04-22_1.png"]
 thumb: "/images/reports/angdaan_29-04-22_1.png"
-captions: [Dr. Johnson A explaining clearly about organ donation to students"]
+captions: ["Dr. Johnson A explaining clearly about organ donation to students"]
 authors: []
 tags: []
 ---

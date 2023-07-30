@@ -15,13 +15,13 @@ images:
 thumb: "/images/reports/online_ebsb_28-08-21_1.jpg"
 captions:
   [
-    "Figure 1. Presentation from NER directorate",
-    "Figure 2. Presentation from TN, P & AN directorate",
-    "Figure 3. Presentation on Quit India Movement",
-    "Figure 4. EXPA program trainer interacting with the cadets",
-    "Figure 5. Presentation on critical thinking",
-    "Figure 6. Cadet reciting poem on poem recitation competition",
-    "Figure 7. NCC song was played at the end of the camp",
+    "Presentation from NER directorate",
+    "Presentation from TN, P & AN directorate",
+    "Presentation on Quit India Movement",
+    "EXPA program trainer interacting with the cadets",
+    "Presentation on critical thinking",
+    "Cadet reciting poem on poem recitation competition",
+    "NCC song was played at the end of the camp",
   ]
 authors: []
 tags: []

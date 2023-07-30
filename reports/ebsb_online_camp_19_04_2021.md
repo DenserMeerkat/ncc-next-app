@@ -14,12 +14,12 @@ images:
 thumb: "/images/reports/ebsb_online_camp_19_04_2021_2.jpg"
 captions:
   [
-    "Figure 1. Presentation on history of Tamil Nadu",
-    "Figure 2. Interactive session with the cadets",
-    "Figure 3. Presentation on dialects of Tamil Nadu",
-    "Figure 4. Cadet singing a folk song of Tamil Nadu",
-    "Figure 5. Cadet participating in declamation competition",
-    "Figure 6. Play on Jallianwala Bagh Massacre",
+    "Presentation on history of Tamil Nadu",
+    "Interactive session with the cadets",
+    "Presentation on dialects of Tamil Nadu",
+    "Cadet singing a folk song of Tamil Nadu",
+    "Cadet participating in declamation competition",
+    "Play on Jallianwala Bagh Massacre",
   ]
 authors: []
 tags: []

@@ -4,7 +4,7 @@ location: "3 (TN) Bn NCC Campus, Kancheepuram"
 date: "08-04-2023"
 images: ["/images/reports/fireselect1.jpg"]
 thumb: "/images/reports/fireselect1.jpg"
-captions: [The cadets of Anna University with JCO and PI Staff]
+captions: ["The cadets of Anna University with JCO and PI Staff"]
 authors: []
 tags: []
 ---
