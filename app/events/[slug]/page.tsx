@@ -2,9 +2,10 @@ import fs from "fs";
 import matter from "gray-matter";
 import { getReportMetadata } from "../../../components/utils/getReportMetadata";
 import ReportContent from "../../../components/Events/ReportContent";
+import RouteChange from "@/components/common/RouteChange";
 
 const getReportContent = (slug: string) => {
-  const folder = "reports/eventReports/";
+  const folder = "reports/";
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
@@ -29,15 +30,18 @@ const ReportPage = (props: any) => {
   const captions = report.data.captions;
   const content = report.content;
   return (
-    <ReportContent
-      title={title}
-      date={date}
-      content={content}
-      location={location}
-      thumb={thumb}
-      images={images}
-      captions={captions}
-    />
+    <>
+      <RouteChange />
+      <ReportContent
+        title={title}
+        date={date}
+        content={content}
+        location={location}
+        thumb={thumb}
+        images={images}
+        captions={captions}
+      />
+    </>
   );
 };
 

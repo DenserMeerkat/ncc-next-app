@@ -31,69 +31,73 @@ const ReportCarousel = (props: any) => {
     setActive(active > 0 ? active - 1 : length - 1);
   };
   return (
-    <div className="flex flex-col lg:flex-row gap-4 xl:gap-8 mt-8 items-center max-w-full">
-      <div className="flex-wrap flex flex-row lg:flex-col select-none ">
-        {images.map((image: string, index: number) => (
-          <div
-            key={index}
-            className={active === index ? thumbTailActive : thumbTail}
-          >
-            <div className="p-1 h-[50px] w-[80px]  sm:h-[74px] sm:w-[114px]">
-              <div className="relative flex items-center w-full h-full">
-                <Image
-                  key={index}
-                  src={image}
-                  layout="fill"
-                  alt={`Thumbnail ${index + 1}`}
-                  className="h-14 sm:h-16 rounded-sm object-cover border"
-                  onClick={() => {
-                    setActive(index);
-                  }}
-                  quality={10}
-                />
+    <div className="flex flex-col lg:flex-row gap-4 xl:gap-8 mt-8 items-center max-w-full justify-center">
+      {images.length > 1 && (
+        <div className="flex-wrap flex flex-row lg:flex-col select-none ">
+          {images.map((image: string, index: number) => (
+            <div
+              key={index}
+              className={active === index ? thumbTailActive : thumbTail}
+            >
+              <div className="p-1 h-[50px] w-[80px]  sm:h-[74px] sm:w-[114px]">
+                <div className="relative flex items-center w-full h-full">
+                  <Image
+                    key={index}
+                    src={image}
+                    layout="fill"
+                    alt={`Thumbnail ${index + 1}`}
+                    className="h-14 sm:h-16 rounded-sm object-cover border"
+                    onClick={() => {
+                      setActive(index);
+                    }}
+                    quality={10}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
       <div
         id="carousel"
         className="relative p-0 sm:p-1 border 
       md:rounded-lg border-gray-300 dark:border-slate-700"
       >
-        <div className="relative w-full">
-          <div
-            aria-label="Carousel Controls"
-            className="flex gap-0.5 absolute z-10 left-1/2 transform -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0
+        {images.length > 1 && (
+          <div className="relative w-full">
+            <div
+              aria-label="Carousel Controls"
+              className="flex gap-0.5 absolute z-10 left-1/2 transform -translate-x-1/2 md:left-auto md:right-0 md:translate-x-0
         rounded-br-sm md:rounded-br-none md:rounded-tr-sm rounded-bl-sm overflow-hidden"
-          >
-            <button aria-label="Previous button" className={controlTail}>
-              <TooltipElement
-                element={<StepBack onClick={handlePrevClick} />}
-                tooltip={"Previous"}
-              />
-            </button>
-            <button aria-label="Play/Pause button" className={controlTail}>
-              {autoplay ? (
+            >
+              <button aria-label="Previous button" className={controlTail}>
                 <TooltipElement
-                  element={<Pause onClick={handleAutoplayClick} />}
-                  tooltip={"Pause Autoplay"}
+                  element={<StepBack onClick={handlePrevClick} />}
+                  tooltip={"Previous"}
                 />
-              ) : (
+              </button>
+              <button aria-label="Play/Pause button" className={controlTail}>
+                {autoplay ? (
+                  <TooltipElement
+                    element={<Pause onClick={handleAutoplayClick} />}
+                    tooltip={"Pause Autoplay"}
+                  />
+                ) : (
+                  <TooltipElement
+                    element={<Play onClick={handleAutoplayClick} />}
+                    tooltip={"Play Autoplay"}
+                  />
+                )}
+              </button>
+              <button aria-label="Forward button" className={controlTail}>
                 <TooltipElement
-                  element={<Play onClick={handleAutoplayClick} />}
-                  tooltip={"Play Autoplay"}
+                  element={<StepForward onClick={handleNextClick} />}
+                  tooltip={"Next"}
                 />
-              )}
-            </button>
-            <button aria-label="Forward button" className={controlTail}>
-              <TooltipElement
-                element={<StepForward onClick={handleNextClick} />}
-                tooltip={"Next"}
-              />
-            </button>
+              </button>
+            </div>
           </div>
-        </div>
+        )}
         <Carousel
           selectedItem={active}
           className="min-w-[300px] max-w-[600px] min-h-[200px] h-max md:rounded-md overflow-hidden bg-rose-200 dark:bg-slate-800"

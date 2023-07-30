@@ -2,12 +2,12 @@ import React from "react";
 import SectionHeading from "../common/SectionHeading";
 import { MdOutlineNewReleases } from "react-icons/md";
 import LatestReports from "./LatestReports";
-import { getLatestReportMetadata } from "../utils/getReportMetadata";
+import { getReportMetadata } from "../utils/getReportMetadata";
 import ReportPreview from "../Events/ReportPreview";
 import { ReportMetadata } from "../utils/ReportMetadata";
 
 const Latest: React.FC = () => {
-  const reportMetadata: ReportMetadata[] = getLatestReportMetadata();
+  var reportMetadata: ReportMetadata[] = getReportMetadata();
   reportMetadata.sort((a, b) => {
     const dateA = new Date(
       Number(a.date.slice(6, 10)),
@@ -21,6 +21,7 @@ const Latest: React.FC = () => {
     );
     return dateB.getTime() - dateA.getTime();
   });
+  reportMetadata = reportMetadata.slice(0, 7);
   const years: React.ReactElement<any>[] = [];
   reportMetadata.map((report) => {
     years.push(
