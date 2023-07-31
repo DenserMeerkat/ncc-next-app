@@ -3,6 +3,7 @@ import "react-multi-carousel/lib/styles.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import RootComponent from "./Wrappers.tsx";
 
+import { Analytics } from "@vercel/analytics/react";
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -25,7 +26,10 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.className} selection:bg-rose-100 dark:selection:bg-slate-600`}
       >
-        <RootComponent>{children}</RootComponent>
+        <RootComponent>
+          {children}
+          <Analytics />
+        </RootComponent>
       </body>
     </html>
   );
