@@ -4,19 +4,13 @@
 | ---------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------ |
 | ![NCC Logo](/public/images/logos/ncc_logo.png) | ![AU logo](/public/images/logos/AU_logo_100.png) | ![Azadi ka Amrit Mahotsav ](/public/images/logos/azadi_ka_amrit_100.png) |
 
-<!-- <p>
-<img src="public/images/logos/ncc_logo.png" alt="NCC Logo"/>
-<img src="public/images/logos/AU_logo_100.png" alt="AU logo"/>
-<img src="public/images/logos/azadi_ka_amrit_100.png" alt="Azadi ka Amrit Mahotsav"/>
-</p> -->
-
 ## Introduction
 
 Welcome to the repository for the official website of the National Cadet Corps (NCC) Army Wing at Anna university. This website serves as a platform to showcase the vibrant and inspiring world of NCC at our college.
 
 ## About NCC
 
-The National Cadet Corps is a premier youth organization that aims to develop character, discipline, leadership, and a spirit of service among the cadets. At [Your College Name], we take pride in our NCC unit, which has been fostering the values of patriotism and social responsibility in our cadets.
+The National Cadet Corps is a premier youth organization that aims to develop character, discipline, leadership, and a spirit of service among the cadets. At Anna University, we take pride in our NCC unit, which has been fostering the values of patriotism and social responsibility in our cadets.
 
 ## Features
 
@@ -24,7 +18,6 @@ The National Cadet Corps is a premier youth organization that aims to develop ch
 - Highlights of our training programs, camps, and special events.
 - Galleries featuring memorable moments from our NCC journey.
 - Updates on the latest events, news, and achievements.
-- An overview of our Associate NCC Officers (ANOs) and their contributions.
 - Opportunities to get involved and join the NCC family.
 
 ## Technologies Used
