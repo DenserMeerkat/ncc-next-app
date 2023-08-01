@@ -8,9 +8,24 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
 
 const GalleryCards = () => {
+  const firstBatch = "/images/wallpapers/first_batch.jpg";
   return (
-    <div className="bg-slate-100 dark:bg-slate-900/[0.7] relative h-max py-12">
+    <div className="bg-slate-100 dark:bg-slate-900/[0.7] relative h-max py-12 pt-4">
       <div className=" max-w-5xl mx-auto">
+        <div className="max-w-2xl mb-8 mx-auto p-2 border-2 rounded-md">
+          <AspectRatio ratio={1255 / 994} className="relative">
+            <Image
+              className="rounded-sm"
+              src={firstBatch}
+              width={1255}
+              height={994}
+              blurDataURL={firstBatch.replace("images", "min_images")}
+              placeholder="blur"
+              layout="intrinsic"
+              alt="1st bath of NCC Cadets"
+            />
+          </AspectRatio>
+        </div>
         <SectionHeading
           className="mb-6"
           icon={Focus}
