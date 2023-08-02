@@ -1,6 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { ReportMetadata } from "./ReportMetadata";
+import { ReportMetadata } from "./interfaces";
 
 export function getReportMetadata(): ReportMetadata[] {
   const folder = "reports/";

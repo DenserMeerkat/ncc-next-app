@@ -1,3 +1,10 @@
+import {
+  special_occasions,
+  republic_day,
+  independence_day,
+  events_campaigns,
+} from "./mainGallery";
+
 export const gallery = [
   {
     id: 0,
@@ -5,6 +12,7 @@ export const gallery = [
     title: "Camps & Training",
     thumb: "/images/gallery/thumbs/camps_&_training.jpg",
     alt: "Camps & Training",
+    photos: [],
   },
   {
     id: 1,
@@ -12,6 +20,7 @@ export const gallery = [
     title: "Republic Day",
     thumb: "/images/gallery/thumbs/republic_day.jpg",
     alt: "Republic Day",
+    photos: republic_day,
   },
   {
     id: 2,
@@ -19,6 +28,7 @@ export const gallery = [
     title: "Independence Day",
     thumb: "/images/gallery/thumbs/independence_day.jpg",
     alt: "Independence Day",
+    photos: independence_day,
   },
   {
     id: 3,
@@ -26,6 +36,7 @@ export const gallery = [
     title: "Sports Activities",
     thumb: "/images/gallery/thumbs/sports_activities.jpg",
     alt: "Sports Activities",
+    photos: [],
   },
   {
     id: 4,
@@ -33,6 +44,7 @@ export const gallery = [
     title: "Events & Campaigns",
     thumb: "/images/gallery/thumbs/events_&_campaigns.jpg",
     alt: "Events & Campaigns",
+    photos: events_campaigns,
   },
   {
     id: 5,
@@ -40,5 +52,6 @@ export const gallery = [
     title: "Special Occasions",
     thumb: "/images/gallery/thumbs/special_occasions.jpg",
     alt: "Special Occasions",
+    photos: special_occasions,
   },
 ];

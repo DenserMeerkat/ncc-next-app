@@ -4,7 +4,7 @@ import { MdOutlineNewReleases } from "react-icons/md";
 import LatestReports from "./LatestReports";
 import { getReportMetadata } from "../utils/getReportMetadata";
 import ReportPreview from "../Events/ReportPreview";
-import { ReportMetadata } from "../utils/ReportMetadata";
+import { ReportMetadata } from "../utils/interfaces";
 
 const Latest: React.FC = () => {
   var reportMetadata: ReportMetadata[] = getReportMetadata();

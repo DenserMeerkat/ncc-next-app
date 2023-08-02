@@ -1,4 +1,4 @@
-import GalleryPosters from "@/components/Gallery/GaleryPosters";
+import GalleryPosters from "@/components/Gallery/GalleryPosters";
 import GalleryCards from "@/components/Gallery/GalleryCards";
 import RouteChange from "@/components/common/RouteChange";
 
