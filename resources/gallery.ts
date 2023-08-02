@@ -1,8 +1,10 @@
 import {
+  camps_trainings,
   special_occasions,
   republic_day,
   independence_day,
   events_campaigns,
+  sports_activity,
 } from "./mainGallery";
 
 export const gallery = [
@@ -12,7 +14,7 @@ export const gallery = [
     title: "Camps & Training",
     thumb: "/images/gallery/thumbs/camps_&_training.jpg",
     alt: "Camps & Training",
-    photos: [],
+    photos: camps_trainings,
   },
   {
     id: 1,
@@ -36,7 +38,7 @@ export const gallery = [
     title: "Sports Activities",
     thumb: "/images/gallery/thumbs/sports_activities.jpg",
     alt: "Sports Activities",
-    photos: [],
+    photos: sports_activity,
   },
   {
     id: 4,
