@@ -29,11 +29,11 @@ const HomeDialog = () => {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Start Your Journey</DialogTitle>
-          <DialogDescription>
-            Admissions Open - Join NCC now! Fill the GForm below and start your
-            transformative journey. We look forward to welcoming you!
-          </DialogDescription>
         </DialogHeader>
+        <DialogDescription>
+          Admissions Open - Join NCC now! Fill the GForm below and start your
+          transformative journey. We look forward to welcoming you!
+        </DialogDescription>
         <div className="my-4 mx-auto">
           <button>
             <Link
@@ -48,11 +48,11 @@ const HomeDialog = () => {
             </Link>
           </button>
           <div className="flex my-6 justify-center items-center">
-            <div className="mt-1 h-[1px] w-full bg-gray-800 dark:bg-slate-400"></div>
-            <p className="mx-2 text-sm">or</p>
-            <div className="mt-1 h-[1px] w-full bg-gray-800 dark:bg-slate-400"></div>
+            <div className="mt-1 h-[1px] w-full bg-gray-300 dark:bg-slate-700"></div>
+            <p className="mx-2 text-sm text-gray-500 dark:text-slate-400">or</p>
+            <div className="mt-1 h-[1px] w-full bg-gray-300 dark:bg-slate-700"></div>
           </div>
-          <div className="mt-4 max-w-xl rounded-lg overflow-hidden">
+          <div className="mt-4 max-w-xl rounded-lg overflow-hidden border-2 bg-rose-100 dark:bg-slate-900">
             <AspectRatio ratio={1} className="relative">
               <Image
                 src={admission_qr}
