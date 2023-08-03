@@ -6,6 +6,7 @@ import Link from "next/link";
 import TooltipElement from "../common/TooltipElement";
 import SectionHeading from "../common/SectionHeading";
 import { heroLogos } from "@/resources/hero";
+import HomeDialog from "./HomeDialog";
 
 const Hero = () => {
   const isNonMobile = useMediaQuery("(min-width:900px)");
@@ -59,17 +60,7 @@ const Hero = () => {
           </p>
           <br />
           <div className="flex flex-col gap-6 min-[900px]:gap-6 min-[900px]:flex-row">
-            <button
-              className={`py-1.5 px-4 md:py-2 md:px-6 rounded-md border border-rose-400 dark:border-blue-500 bg-rose-400 dark:bg-blue-500 text-white
-              hover:border-rose-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-rose-500 transition-colors select-none
-              font-medium text-lg [word-spacing:3px] font-sans`}
-            >
-              <Link href="#">
-                <p className="drop-shadow-[1px_2px_1px_rgba(0,0,0,0.5)]">
-                  Start your Journey
-                </p>
-              </Link>
-            </button>
+            <HomeDialog />
             <button
               className={`py-1.5 px-4 md:py-2 md:px-6  rounded-md border-2 font-semibold text-md tracking-wide border-gray-400 bg-slate-200/[0.7] 
               text-gray-700 dark:text-white/[0.8] hover:bg-slate-300 hover:border-slate-500 transition-colors select-none

@@ -743,7 +743,7 @@ export const camps_trainings = [
   {
     id: 5,
     title: "Camps&Trainings",
-    src: "/images/gallery/camps/ebsbo1.png",
+    src: "/images/gallery/camps/ebsbo1.jpg",
     alt: "Camps&Trainings",
     height: 1080,
     width: 1920,
@@ -751,7 +751,7 @@ export const camps_trainings = [
   {
     id: 6,
     title: "Camps&Trainings",
-    src: "/images/gallery/camps/ebsbo2.png",
+    src: "/images/gallery/camps/ebsbo2,jpg",
     alt: "Camps&Trainings",
     height: 1080,
     width: 1920,
@@ -759,7 +759,7 @@ export const camps_trainings = [
   {
     id: 7,
     title: "Camps&Trainings",
-    src: "/images/gallery/camps/ebsbo3.png",
+    src: "/images/gallery/camps/ebsbo3,jpg",
     alt: "Camps&Trainings",
     height: 1080,
     width: 1920,
