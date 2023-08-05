@@ -17,9 +17,9 @@ const HomeDialog = () => {
     <Dialog>
       <DialogTrigger asChild>
         <button
-          className={`py-1.5 px-4 md:py-2 md:px-6 rounded-md border border-rose-400 dark:border-blue-500 bg-rose-400 dark:bg-blue-500 text-white
+          className={`py-1.5 px-4 md:py-2 sm:px-6   rounded-md border border-rose-400 dark:border-blue-500 bg-rose-400 dark:bg-blue-500 text-white
               hover:border-rose-500  hover:dark:border-sky-700 hover:dark:bg-sky-700 hover:bg-rose-500 transition-colors select-none
-              font-medium text-lg [word-spacing:3px] font-sans`}
+              font-medium text-lg [word-spacing:2px] font-sans`}
         >
           <p className="drop-shadow-[1px_2px_1px_rgba(0,0,0,0.5)]">
             Start your Journey

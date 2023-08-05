@@ -62,11 +62,11 @@ const Hero = () => {
           <div className="flex flex-col gap-6 min-[900px]:gap-6 min-[900px]:flex-row">
             <HomeDialog />
             <button
-              className={`py-1.5 px-4 md:py-2 md:px-6  rounded-md border-2 font-semibold text-md tracking-wide border-gray-400 bg-slate-200/[0.7] 
+              className={`flex items-center justify-center rounded-md border-2 font-semibold text-md tracking-wide border-gray-400 bg-slate-200/[0.7] 
               text-gray-700 dark:text-white/[0.8] hover:bg-slate-300 hover:border-slate-500 transition-colors select-none
               dark:border-slate-500 dark:bg-slate-700 dark:hover:bg-slate-800 dark:hover:border-slate-700`}
             >
-              <Link href="/about">
+              <Link href="/about" className="py-1.5 md:py-2 px-4 md:px-6">
                 <p>Learn More</p>
               </Link>
             </button>
