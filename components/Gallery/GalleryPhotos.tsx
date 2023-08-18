@@ -10,11 +10,17 @@ const GalleryPhotos = (props: any) => {
 
   const CustomImageComponent = ({ index, photo, margin, onClick }: any) => {
     return (
-      <div key={index} style={{ margin: margin }}>
+      <div
+        key={index}
+        style={{ margin: margin }}
+        className="rounded-md overflow-hidden"
+      >
         <Image
-          className="rounded-md overflow-hidden"
+          className="rounded-md overflow-hidden border"
           src={photo.src}
           alt={photo.alt}
+          blurDataURL={photo.src.replace("images", "min_images")}
+          placeholder="blur"
           height={photo.height}
           width={photo.width}
         />
