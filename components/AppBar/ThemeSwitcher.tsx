@@ -35,7 +35,7 @@ const ThemeSwitcher = () => {
               <Sun className={tailClass} />
             </button>
           }
-          tooltip={"Switch to Light mode"}
+          tooltip={"Light mode"}
         />
       );
     } else {
@@ -49,7 +49,7 @@ const ThemeSwitcher = () => {
               <Moon className={tailClass} />
             </button>
           }
-          tooltip={"Switch to Dark mode"}
+          tooltip={"Dark mode"}
         />
       );
     }

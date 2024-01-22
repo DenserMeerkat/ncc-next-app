@@ -50,21 +50,24 @@ const LeaderCard = (props: any) => {
           bg-sky-100/[0.5] dark:bg-slate-900 border border-gray-300 dark:border-slate-800
           drop-shadow-md transition select-text font-medium"
     >
-      {src !== "" ? (
-        <Image
-          className="border-r border-gray-300 dark:border-slate-700 select-none"
-          width={240}
-          height={187.5}
-          src={src}
-          alt={alt}
-          blurDataURL={src.replace("images", "min_images")}
-          placeholder="blur"
-        />
-      ) : (
-        <div className="w-[240px] h-48 flex items-center justify-center border-r-2">
-          <User className="h-24 w-24 stroke-gray-400 dark:stroke-slate-500 stroke-1  " />
-        </div>
-      )}
+      {
+        // src !== ""
+        false ? (
+          <Image
+            className="border-r border-gray-300 dark:border-slate-700 select-none"
+            width={240}
+            height={187.5}
+            src={src}
+            alt={alt}
+            blurDataURL={src.replace("images", "min_images")}
+            placeholder="blur"
+          />
+        ) : (
+          <div className="w-[240px] h-48 flex items-center justify-center border-r-2">
+            <User className="h-24 w-24 stroke-gray-400 dark:stroke-slate-500 stroke-1  " />
+          </div>
+        )
+      }
       <div className="py-4 w-full flex flex-col items-center justify-between">
         <div>
           <div className="mx-auto w-fit rounded-full px-4 py-1 mb-2 border border-rose-200 dark:border-slate-600 bg-rose-100 dark:bg-slate-800">
