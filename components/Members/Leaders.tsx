@@ -23,16 +23,16 @@ const Leaders = () => {
           title="Meet our Cadet Leaders"
         />
         <div className="flex items-center justify-center mb-4 sm:mb-6">
-          {LeaderCard({ ...leaders[0], id: 0 })}
+          {LeaderCard({ ...leaders[0], showImg: true })}
         </div>
         <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 px-0 min-[350px]:px-3  mb-4 sm:mb-6">
-          {LeaderCard({ ...leaders[1], id: 1 })}
-          {LeaderCard({ ...leaders[2], id: 2 })}
-          {LeaderCard({ ...leaders[3], id: 3 })}
+          {LeaderCard({ ...leaders[1], showImg: true })}
+          {LeaderCard({ ...leaders[2], showImg: true })}
+          {LeaderCard({ ...leaders[3], showImg: false })}
         </div>
         <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-4 sm:gap-6 px-0 min-[350px]:px-3">
-          {LeaderCard({ ...leaders[4], id: 4 })}
-          {LeaderCard({ ...leaders[5], id: 5 })}
+          {LeaderCard({ ...leaders[4], showImg: true })}
+          {LeaderCard({ ...leaders[5], showImg: true })}
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ const Leaders = () => {
 export default Leaders;
 
 const LeaderCard = (props: any) => {
-  const { id, name, src, alt, plat, desig, dept } = props;
+  const { id, name, src, alt, plat, desig, dept, showImg } = props;
   return (
     <div
       key={id}
@@ -52,7 +52,7 @@ const LeaderCard = (props: any) => {
     >
       {
         // src !== ""
-        false ? (
+        showImg ? (
           <Image
             className="border-r border-gray-300 dark:border-slate-700 select-none"
             width={240}
