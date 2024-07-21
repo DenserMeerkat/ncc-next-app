@@ -43,7 +43,7 @@ export const currentBatch = {
     desig: "Student",
     plat: "EME Platoon",
     rank: "Company Quarter Master Sergeant",
-    dept: "Dept. of Mechanical Engineering",
+    dept: "Dept. of Civil Engineering",
   },
   csm: {
     id: 5,
